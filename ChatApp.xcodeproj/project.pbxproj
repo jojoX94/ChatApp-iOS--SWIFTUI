@@ -11,6 +11,27 @@
 		49B5159728FD4F1B004D30A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B5159628FD4F1B004D30A2 /* ContentView.swift */; };
 		49B5159928FD4F1D004D30A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B5159828FD4F1D004D30A2 /* Assets.xcassets */; };
 		49B5159C28FD4F1D004D30A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B5159B28FD4F1D004D30A2 /* Preview Assets.xcassets */; };
+		49B515BF28FE7317004D30A2 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515B628FE730E004D30A2 /* Poppins-Bold.ttf */; };
+		49B515C328FE7374004D30A2 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515BB28FE730E004D30A2 /* Poppins-Medium.ttf */; };
+		49B515C428FE7374004D30A2 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515BE28FE730E004D30A2 /* Poppins-ExtraBold.ttf */; };
+		49B515C528FE7374004D30A2 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515B428FD9E28004D30A2 /* Roboto-Bold.ttf */; };
+		49B515C628FE7374004D30A2 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515BC28FE730E004D30A2 /* Poppins-SemiBold.ttf */; };
+		49B515C728FE7374004D30A2 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515AC28FD9E27004D30A2 /* Roboto-Light.ttf */; };
+		49B515C828FE7374004D30A2 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515B928FE730E004D30A2 /* Poppins-Black.ttf */; };
+		49B515C928FE7374004D30A2 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515AB28FD9E26004D30A2 /* Roboto-Thin.ttf */; };
+		49B515CA28FE7374004D30A2 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515B828FE730E004D30A2 /* Poppins-Light.ttf */; };
+		49B515CB28FE7374004D30A2 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515BA28FE730E004D30A2 /* Poppins-ExtraLight.ttf */; };
+		49B515CC28FE7374004D30A2 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515B028FD9E27004D30A2 /* Roboto-BoldItalic.ttf */; };
+		49B515CD28FE7374004D30A2 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515B728FE730E004D30A2 /* Poppins-Regular.ttf */; };
+		49B515CE28FE7374004D30A2 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515B128FD9E28004D30A2 /* Roboto-Medium.ttf */; };
+		49B515CF28FE7374004D30A2 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515B228FD9E28004D30A2 /* Roboto-MediumItalic.ttf */; };
+		49B515D028FE7374004D30A2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515B328FD9E28004D30A2 /* Roboto-Regular.ttf */; };
+		49B515D128FE7374004D30A2 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515AE28FD9E27004D30A2 /* Roboto-Italic.ttf */; };
+		49B515D228FE7374004D30A2 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515AA28FD9E26004D30A2 /* Roboto-ThinItalic.ttf */; };
+		49B515D328FE7374004D30A2 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515B528FD9E28004D30A2 /* Roboto-BlackItalic.ttf */; };
+		49B515D428FE7374004D30A2 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515AF28FD9E27004D30A2 /* Roboto-LightItalic.ttf */; };
+		49B515D528FE7374004D30A2 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515BD28FE730E004D30A2 /* Poppins-Thin.ttf */; };
+		49B515D628FE7374004D30A2 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49B515AD28FD9E27004D30A2 /* Roboto-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +52,16 @@
 		49B515B328FD9E28004D30A2 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		49B515B428FD9E28004D30A2 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		49B515B528FD9E28004D30A2 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		49B515B628FE730E004D30A2 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		49B515B728FE730E004D30A2 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		49B515B828FE730E004D30A2 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		49B515B928FE730E004D30A2 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		49B515BA28FE730E004D30A2 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		49B515BB28FE730E004D30A2 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		49B515BC28FE730E004D30A2 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		49B515BD28FE730E004D30A2 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		49B515BE28FE730E004D30A2 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		49B515D728FE73DC004D30A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +94,7 @@
 		49B5159328FD4F1B004D30A2 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				49B515D728FE73DC004D30A2 /* Info.plist */,
 				49B515A428FD4FD7004D30A2 /* Models */,
 				49B515A528FD4FDD004D30A2 /* Services */,
 				49B515A628FD4FE7004D30A2 /* Core */,
@@ -134,6 +166,15 @@
 			children = (
 				49B515AD28FD9E27004D30A2 /* Roboto-Black.ttf */,
 				49B515B528FD9E28004D30A2 /* Roboto-BlackItalic.ttf */,
+				49B515B928FE730E004D30A2 /* Poppins-Black.ttf */,
+				49B515B628FE730E004D30A2 /* Poppins-Bold.ttf */,
+				49B515BE28FE730E004D30A2 /* Poppins-ExtraBold.ttf */,
+				49B515BA28FE730E004D30A2 /* Poppins-ExtraLight.ttf */,
+				49B515B828FE730E004D30A2 /* Poppins-Light.ttf */,
+				49B515BB28FE730E004D30A2 /* Poppins-Medium.ttf */,
+				49B515B728FE730E004D30A2 /* Poppins-Regular.ttf */,
+				49B515BC28FE730E004D30A2 /* Poppins-SemiBold.ttf */,
+				49B515BD28FE730E004D30A2 /* Poppins-Thin.ttf */,
 				49B515B428FD9E28004D30A2 /* Roboto-Bold.ttf */,
 				49B515B028FD9E27004D30A2 /* Roboto-BoldItalic.ttf */,
 				49B515AE28FD9E27004D30A2 /* Roboto-Italic.ttf */,
@@ -213,7 +254,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49B515CB28FE7374004D30A2 /* Poppins-ExtraLight.ttf in Resources */,
+				49B515D128FE7374004D30A2 /* Roboto-Italic.ttf in Resources */,
+				49B515D428FE7374004D30A2 /* Roboto-LightItalic.ttf in Resources */,
 				49B5159C28FD4F1D004D30A2 /* Preview Assets.xcassets in Resources */,
+				49B515C628FE7374004D30A2 /* Poppins-SemiBold.ttf in Resources */,
+				49B515C428FE7374004D30A2 /* Poppins-ExtraBold.ttf in Resources */,
+				49B515CC28FE7374004D30A2 /* Roboto-BoldItalic.ttf in Resources */,
+				49B515CE28FE7374004D30A2 /* Roboto-Medium.ttf in Resources */,
+				49B515D328FE7374004D30A2 /* Roboto-BlackItalic.ttf in Resources */,
+				49B515D528FE7374004D30A2 /* Poppins-Thin.ttf in Resources */,
+				49B515C528FE7374004D30A2 /* Roboto-Bold.ttf in Resources */,
+				49B515C328FE7374004D30A2 /* Poppins-Medium.ttf in Resources */,
+				49B515BF28FE7317004D30A2 /* Poppins-Bold.ttf in Resources */,
+				49B515C828FE7374004D30A2 /* Poppins-Black.ttf in Resources */,
+				49B515CD28FE7374004D30A2 /* Poppins-Regular.ttf in Resources */,
+				49B515C728FE7374004D30A2 /* Roboto-Light.ttf in Resources */,
+				49B515CF28FE7374004D30A2 /* Roboto-MediumItalic.ttf in Resources */,
+				49B515C928FE7374004D30A2 /* Roboto-Thin.ttf in Resources */,
+				49B515D028FE7374004D30A2 /* Roboto-Regular.ttf in Resources */,
+				49B515D228FE7374004D30A2 /* Roboto-ThinItalic.ttf in Resources */,
+				49B515CA28FE7374004D30A2 /* Poppins-Light.ttf in Resources */,
+				49B515D628FE7374004D30A2 /* Roboto-Black.ttf in Resources */,
 				49B5159928FD4F1D004D30A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,11 +420,12 @@
 				DEVELOPMENT_TEAM = 5LP3MC28Z5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BizTalks;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,11 +450,12 @@
 				DEVELOPMENT_TEAM = 5LP3MC28Z5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BizTalks;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
