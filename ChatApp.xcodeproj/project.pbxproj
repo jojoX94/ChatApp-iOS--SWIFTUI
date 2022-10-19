@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4952CE2428FFD6C100B93F91 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE2328FFD6C100B93F91 /* SignUpView.swift */; };
+		4952CE2C290014E600B93F91 /* GDPR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE2B290014E600B93F91 /* GDPR.swift */; };
+		4952CE302900162F00B93F91 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4952CE2D2900162F00B93F91 /* Inter-Thin.ttf */; };
+		4952CE312900162F00B93F91 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4952CE2E2900162F00B93F91 /* Inter-Medium.ttf */; };
+		4952CE322900162F00B93F91 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4952CE2F2900162F00B93F91 /* Inter-SemiBold.ttf */; };
+		4952CE342900267200B93F91 /* UIScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE332900267200B93F91 /* UIScreen+Extensions.swift */; };
 		49B5159528FD4F1B004D30A2 /* ChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B5159428FD4F1B004D30A2 /* ChatAppApp.swift */; };
 		49B5159728FD4F1B004D30A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B5159628FD4F1B004D30A2 /* ContentView.swift */; };
 		49B5159928FD4F1D004D30A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B5159828FD4F1D004D30A2 /* Assets.xcassets */; };
@@ -42,6 +47,11 @@
 
 /* Begin PBXFileReference section */
 		4952CE2328FFD6C100B93F91 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		4952CE2B290014E600B93F91 /* GDPR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDPR.swift; sourceTree = "<group>"; };
+		4952CE2D2900162F00B93F91 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		4952CE2E2900162F00B93F91 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		4952CE2F2900162F00B93F91 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		4952CE332900267200B93F91 /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
 		49B5159128FD4F1B004D30A2 /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B5159428FD4F1B004D30A2 /* ChatAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppApp.swift; sourceTree = "<group>"; };
 		49B5159628FD4F1B004D30A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +97,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4952CE2528FFFAAC00B93F91 /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				4952CE2728FFFAC300B93F91 /* ViewModels */,
+				4952CE2628FFFAB200B93F91 /* Views */,
+			);
+			path = Feeds;
+			sourceTree = "<group>";
+		};
+		4952CE2628FFFAB200B93F91 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4952CE2728FFFAC300B93F91 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		4952CE2829000FEC00B93F91 /* Tweets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tweets;
+			sourceTree = "<group>";
+		};
+		4952CE292900122800B93F91 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				49B515E728FEE1E7004D30A2 /* RoundedShape.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		4952CE2A2900123500B93F91 /* InputFields */ = {
+			isa = PBXGroup;
+			children = (
+				49B515DF28FEA524004D30A2 /* CustomInputField.swift */,
+				49B515E128FEA784004D30A2 /* CustomSecureInput.swift */,
+				49B515E528FEC569004D30A2 /* CheckboxField.swift */,
+			);
+			path = InputFields;
+			sourceTree = "<group>";
+		};
 		49B5158828FD4F1B004D30A2 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +196,7 @@
 		49B515A328FD4FC6004D30A2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4952CE332900267200B93F91 /* UIScreen+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -159,8 +218,9 @@
 		49B515A628FD4FE7004D30A2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				49B515D828FE867E004D30A2 /* Auth */,
 				49B515A928FD51FC004D30A2 /* Components */,
+				4952CE2528FFFAAC00B93F91 /* Feeds */,
+				49B515D828FE867E004D30A2 /* Auth */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -183,6 +243,9 @@
 				49B515B628FE730E004D30A2 /* Poppins-Bold.ttf */,
 				49B515BE28FE730E004D30A2 /* Poppins-ExtraBold.ttf */,
 				49B515BA28FE730E004D30A2 /* Poppins-ExtraLight.ttf */,
+				4952CE2E2900162F00B93F91 /* Inter-Medium.ttf */,
+				4952CE2F2900162F00B93F91 /* Inter-SemiBold.ttf */,
+				4952CE2D2900162F00B93F91 /* Inter-Thin.ttf */,
 				49B515B828FE730E004D30A2 /* Poppins-Light.ttf */,
 				49B515BB28FE730E004D30A2 /* Poppins-Medium.ttf */,
 				49B515B728FE730E004D30A2 /* Poppins-Regular.ttf */,
@@ -205,10 +268,9 @@
 		49B515A928FD51FC004D30A2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				49B515DF28FEA524004D30A2 /* CustomInputField.swift */,
-				49B515E128FEA784004D30A2 /* CustomSecureInput.swift */,
-				49B515E528FEC569004D30A2 /* CheckboxField.swift */,
-				49B515E728FEE1E7004D30A2 /* RoundedShape.swift */,
+				4952CE2A2900123500B93F91 /* InputFields */,
+				4952CE292900122800B93F91 /* Shapes */,
+				4952CE2829000FEC00B93F91 /* Tweets */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -227,6 +289,7 @@
 			children = (
 				49B515DB28FE87B8004D30A2 /* LoginView.swift */,
 				4952CE2328FFD6C100B93F91 /* SignUpView.swift */,
+				4952CE2B290014E600B93F91 /* GDPR.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -300,6 +363,7 @@
 				49B515D128FE7374004D30A2 /* Roboto-Italic.ttf in Resources */,
 				49B515D428FE7374004D30A2 /* Roboto-LightItalic.ttf in Resources */,
 				49B5159C28FD4F1D004D30A2 /* Preview Assets.xcassets in Resources */,
+				4952CE322900162F00B93F91 /* Inter-SemiBold.ttf in Resources */,
 				49B515C628FE7374004D30A2 /* Poppins-SemiBold.ttf in Resources */,
 				49B515C428FE7374004D30A2 /* Poppins-ExtraBold.ttf in Resources */,
 				49B515CC28FE7374004D30A2 /* Roboto-BoldItalic.ttf in Resources */,
@@ -309,6 +373,7 @@
 				49B515C528FE7374004D30A2 /* Roboto-Bold.ttf in Resources */,
 				49B515C328FE7374004D30A2 /* Poppins-Medium.ttf in Resources */,
 				49B515BF28FE7317004D30A2 /* Poppins-Bold.ttf in Resources */,
+				4952CE312900162F00B93F91 /* Inter-Medium.ttf in Resources */,
 				49B515C828FE7374004D30A2 /* Poppins-Black.ttf in Resources */,
 				49B515CD28FE7374004D30A2 /* Poppins-Regular.ttf in Resources */,
 				49B515C728FE7374004D30A2 /* Roboto-Light.ttf in Resources */,
@@ -316,6 +381,7 @@
 				49B515C928FE7374004D30A2 /* Roboto-Thin.ttf in Resources */,
 				49B515D028FE7374004D30A2 /* Roboto-Regular.ttf in Resources */,
 				49B515D228FE7374004D30A2 /* Roboto-ThinItalic.ttf in Resources */,
+				4952CE302900162F00B93F91 /* Inter-Thin.ttf in Resources */,
 				49B515CA28FE7374004D30A2 /* Poppins-Light.ttf in Resources */,
 				49B515D628FE7374004D30A2 /* Roboto-Black.ttf in Resources */,
 				49B5159928FD4F1D004D30A2 /* Assets.xcassets in Resources */,
@@ -332,9 +398,11 @@
 				49B515E828FEE1E7004D30A2 /* RoundedShape.swift in Sources */,
 				49B515E028FEA524004D30A2 /* CustomInputField.swift in Sources */,
 				49B515DC28FE87B8004D30A2 /* LoginView.swift in Sources */,
+				4952CE2C290014E600B93F91 /* GDPR.swift in Sources */,
 				49B515E228FEA784004D30A2 /* CustomSecureInput.swift in Sources */,
 				4952CE2428FFD6C100B93F91 /* SignUpView.swift in Sources */,
 				49B515E628FEC569004D30A2 /* CheckboxField.swift in Sources */,
+				4952CE342900267200B93F91 /* UIScreen+Extensions.swift in Sources */,
 				49B5159728FD4F1B004D30A2 /* ContentView.swift in Sources */,
 				49B5159528FD4F1B004D30A2 /* ChatAppApp.swift in Sources */,
 			);
