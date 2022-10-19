@@ -16,7 +16,8 @@ struct SignUpView: View {
     @State var isRememberMe = false
     
     @State var isMarked = false
-    
+    @State var termsIsVisible = false
+    @State var privacyIsVisible = false
     
     // MARK: BODY
     var body: some View {
@@ -68,6 +69,9 @@ struct SignUpView: View {
                 .clipShape(RoundedShape(corners: [.topLeft, .topRight]))
             }
         }
+        .sheet(isPresented: $termsIsVisible) {
+            GDPR()
+        }
     }
 }
 
@@ -116,7 +120,7 @@ extension SignUpView {
                     Text("Terms ")
                         .foregroundColor(Color("Blue"))
                         .onTapGesture {
-                            print("Show Terms sheet")
+                            termsIsVisible.toggle()
                         }
                     Text("and ")
                         .foregroundColor(.black.opacity(0.8))
