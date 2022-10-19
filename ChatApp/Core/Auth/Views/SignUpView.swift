@@ -1,18 +1,21 @@
 //
-//  LoginView.swift
+//  SignUpView.swift
 //  ChatApp
 //
-//  Created by Madiapps on 18/10/2022.
+//  Created by Madiapps on 19/10/2022.
 //
 
 import SwiftUI
 
-struct LoginView: View {
+struct SignUpView: View {
     
     // MARK: PROPERTY
     @State var username = ""
+    @State var email = ""
     @State var password = ""
     @State var isRememberMe = false
+    
+    @State var isMarked = false
     
     
     // MARK: BODY
@@ -31,14 +34,16 @@ struct LoginView: View {
                     VStack(spacing: 0) {
                         CustomInputField(text: $username, title: "Username", placeholder: "username").padding(.bottom, 18)
                         
+                        CustomInputField(text: $email, title: "E-mail", placeholder: "example@email.com").padding(.bottom, 18)
+                        
                         CustomSecureInput(text: $password, title: "Password", placeholder: "at least 8 characters").padding(.bottom, 14)
                         
                         authAction
                         
                         Button {
-                            print("Button Login clicked => \(username) \(password)")
+                            print("Button Login clicked => \(username) \(email) \(password)")
                         } label: {
-                            Text("Login")
+                            Text("Sign Up")
                                 .font(.custom("Roboto-Medium", size: 15))
                                 .padding(.vertical)
                                 .frame(maxWidth: .infinity)
@@ -66,14 +71,14 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        SignUpView()
     }
 }
 
 // MARK: COMPONENTS
-extension LoginView {
+extension SignUpView {
     private var headerView: some View {
         HStack(spacing: 30) {
             Button {
@@ -84,7 +89,7 @@ extension LoginView {
                     .foregroundColor(.white)
             }
 
-            Text("Log In.")
+            Text("Sign Up.")
                 .font(.custom("Roboto-Black", size: 36))
                 .foregroundColor(.white)
             
@@ -95,16 +100,36 @@ extension LoginView {
     
     private var authAction: some View {
         HStack {
-            CheckboxField(id: "", label: "remember me", size: 13, color: .gray, textSize: 11) { _,_  in }
+            Image(systemName: self.isMarked ? "checkmark.square.fill" : "square")
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 13, height: 13)
+                .onTapGesture {
+                    isMarked.toggle()
+                }
             
-            Spacer()
-            
-            Button {
-                print("Button clicked")
-            } label: {
-                Text("Forgot Password ?")
-                    .font(.custom("Robto-Regular", size: 11))
+            HStack(spacing: 0) {
+                Group {
+                    Text("I agree with")
+                        .foregroundColor(.black.opacity(0.8))
+                    Text("Terms ")
+                        .foregroundColor(Color("Blue"))
+                        .onTapGesture {
+                            print("Show Terms sheet")
+                        }
+                    Text("and ")
+                        .foregroundColor(.black.opacity(0.8))
+                    Text("Privacy")
+                        .foregroundColor(Color("Blue"))
+                        .onTapGesture {
+                            print("Show Privacy sheet")
+                        }
+                    
+                }.font(.custom("Roboto-Regular", size: 11))
+                
             }
+            Spacer()
 
         }
         .padding(.bottom, 27)
@@ -112,10 +137,10 @@ extension LoginView {
     
     private var signUpLink: some View {
         HStack {
-            Text("Don't have an account?")
+            Text("I'm already an account.")
                 .font(.custom("Roboto-Light", size: 11))
                 .foregroundColor(.black.opacity(0.9))
-            Text("Sign Up")
+            Text("Sign In")
                 .font(.custom("Roboto-Medium", size: 11))
                 .foregroundColor(Color("Blue"))
                 .onTapGesture {

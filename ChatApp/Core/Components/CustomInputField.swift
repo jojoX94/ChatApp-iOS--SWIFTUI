@@ -14,7 +14,7 @@ struct CustomInputField: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
-            Text(title.capitalized)
+            Text(title)
                 .font(.custom("Roboto-Medium", size: 15))
             TextField("", text: $text)
                 .font(.custom("Roboto-Light", size: 13))
