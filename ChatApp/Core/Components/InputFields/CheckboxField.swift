@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct CheckboxField: View {
+    
+    // MARK: PROPERTIES
+    
+    @State var isMarked:Bool = false
+    
     let id: String
     let label: String
     let size: CGFloat
     let color: Color
     let textSize: Int
     let callback: (String, Bool)->()
+    
+    // MARK: INITIALIZATION
         
     init(
         id: String,
@@ -31,7 +38,7 @@ struct CheckboxField: View {
         self.callback = callback
     }
         
-    @State var isMarked:Bool = false
+    // MARK: BODY
     
     var body: some View {
         Button(action:{

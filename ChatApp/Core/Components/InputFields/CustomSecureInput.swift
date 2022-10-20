@@ -13,10 +13,16 @@ enum focusedField {
 }
 
 struct CustomSecureInput: View {
+    
+    // MARK: PROPERTIES
+    
     @Binding var text: String
     @State var isSecure: Bool = true
+    
     var title: String
     var placeholder: String
+    
+    // MARK: BODY
     
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {

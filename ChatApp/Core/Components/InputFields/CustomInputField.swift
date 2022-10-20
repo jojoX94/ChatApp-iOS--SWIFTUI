@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct CustomInputField: View {
+    
+    // MARK: PROPERTIES
+    
     @Binding var text: String
+    
     var title: String
     var placeholder : String
+    
+    // MARK: BODY
     
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
