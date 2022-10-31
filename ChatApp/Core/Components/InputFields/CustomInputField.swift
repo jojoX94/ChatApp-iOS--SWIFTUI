@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct CustomInputField: View {
+    
+    // MARK: PROPERTIES
+    
     @Binding var text: String
+    
     var title: String
-    var placeholder : String
+    @AllLowerCase var placeholder : String
+    
+    // MARK: BODY
     
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
@@ -18,7 +24,7 @@ struct CustomInputField: View {
                 .font(.custom("Roboto-Medium", size: 15))
             TextField("", text: $text)
                 .font(.custom("Roboto-Light", size: 13))
-                .modifier(PlaceholderStyle(showPlaceHolder: text.isEmpty, placeholder: placeholder.lowercased()))
+                .modifier(PlaceholderStyle(showPlaceHolder: text.isEmpty, placeholder: placeholder))
                 .padding(.vertical, 12)
                 .padding(.leading, 18)
                 .background(Color.gray.opacity(0.2))

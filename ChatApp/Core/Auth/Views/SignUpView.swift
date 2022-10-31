@@ -10,6 +10,7 @@ import SwiftUI
 struct SignUpView: View {
     
     // MARK: PROPERTY
+    
     @State var username = ""
     @State var email = ""
     @State var password = ""
@@ -20,6 +21,7 @@ struct SignUpView: View {
     @State var privacyIsVisible = false
     
     // MARK: BODY
+    
     var body: some View {
         ZStack {
             

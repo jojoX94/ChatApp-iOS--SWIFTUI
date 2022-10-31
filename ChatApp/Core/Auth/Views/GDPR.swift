@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GDPR: View {
+    
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {

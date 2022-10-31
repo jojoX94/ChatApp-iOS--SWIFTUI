@@ -10,12 +10,14 @@ import SwiftUI
 struct LoginView: View {
     
     // MARK: PROPERTY
+    
     @State var username = ""
     @State var password = ""
     @State var isRememberMe = false
     
     
     // MARK: BODY
+    
     var body: some View {
         ZStack {
             
