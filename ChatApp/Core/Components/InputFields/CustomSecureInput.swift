@@ -20,7 +20,7 @@ struct CustomSecureInput: View {
     @State var isSecure: Bool = true
     
     var title: String
-    var placeholder: String
+    @AllLowerCase var placeholder: String
     
     // MARK: BODY
     
@@ -36,7 +36,7 @@ struct CustomSecureInput: View {
                         TextField("", text: $text)
                     }
                 }
-                .modifier(PlaceholderStyle(showPlaceHolder: text.isEmpty, placeholder: placeholder.lowercased()))
+                .modifier(PlaceholderStyle(showPlaceHolder: text.isEmpty, placeholder: placeholder))
                 .font(.custom("Roboto-Light", size: 13))
                 .animation(.easeInOut(duration: 0.1), value: isSecure)          .padding(.vertical, 12)
                 .padding(.leading, 18)
