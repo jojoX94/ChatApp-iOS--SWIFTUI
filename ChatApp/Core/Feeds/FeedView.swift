@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct FeedView: View {
+    
+    // MARK: BODY
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20) {
-                    
                     storiesList
-
+                    
                     feedsList
                 }
             }
@@ -31,6 +33,8 @@ struct FeedView_Previews: PreviewProvider {
         FeedView()
     }
 }
+
+// MARK: COMPONENTS
 
 extension FeedView {
     private var storiesList: some View {
@@ -57,20 +61,24 @@ extension FeedView {
     @ToolbarContentBuilder
     func myToolBarContent() -> some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
-            Image("CameraIcon")
-                .background(
-                    Circle()
-                        .frame(width: 48, height: 48)
-                        .foregroundColor(Color(hex: "#E6EEFA"))
+            HStack {
+                Image("CameraIcon")
+                    .background(
+                        Circle()
+                            .frame(width: 44, height: 44)
+                            .foregroundColor(Color(hex: "#E6EEFA"))
                     )
-                .padding(.leading, 10)
-                .padding(.bottom, 15)
+            }
+            .padding(.leading, 10)
+            .padding(.vertical, 20)
         }
+        
         
         ToolbarItem(placement: .principal) {
             Text("Home")
                 .font(.custom("Poppins-SemiBold", size: 20))
                 .foregroundColor(.black)
+                .padding(.vertical, 20)
         }
         
         
@@ -78,11 +86,11 @@ extension FeedView {
             Image("NotifIcon")
                 .background(
                     Circle()
-                        .frame(width: 48, height: 48)
+                        .frame(width: 44, height: 44)
                         .foregroundColor(Color(hex: "#E6EEFA"))
-                    )
+                )
                 .padding(.trailing, 10)
-                .padding(.bottom, 15)
+                .padding(.vertical, 20)
         }
     }
 }

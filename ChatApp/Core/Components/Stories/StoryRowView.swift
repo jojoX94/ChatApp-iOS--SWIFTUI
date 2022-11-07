@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StoryRowView: View {
+    
     var body: some View {
         VStack {
             Circle()
@@ -19,7 +20,7 @@ struct StoryRowView: View {
                         .frame(width: 70, height: 70)
                 }
                 .padding(.vertical, 6)
-                
+            
             Text("car.street")
                 .font(.custom("Poppins-SemiBold", size: 13))
         }

@@ -20,6 +20,7 @@ struct SignUpView: View {
     @State var termsIsVisible = false
     @State var privacyIsVisible = false
     
+    
     // MARK: BODY
     
     var body: some View {
@@ -35,37 +36,22 @@ struct SignUpView: View {
                     Image("trip")
                     
                     VStack(spacing: 0) {
-                        CustomInputField(text: $username, title: "Username", placeholder: "username").padding(.bottom, 18)
                         
-                        CustomInputField(text: $email, title: "E-mail", placeholder: "example@email.com").padding(.bottom, 18)
-                        
-                        CustomSecureInput(text: $password, title: "Password", placeholder: "at least 8 characters").padding(.bottom, 14)
+                        listTextFields
                         
                         authAction
                         
-                        Button {
-                            print("Button Login clicked => \(username) \(email) \(password)")
-                        } label: {
-                            Text("Sign Up")
-                                .font(.custom("Roboto-Medium", size: 15))
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .foregroundColor(.white)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .foregroundColor(Color("Blue"))
-                                )
-                        }
+                        submitButton
                         
                         Spacer()
                         
                         signUpLink
                         
                         Spacer()
-
+                        
                     }
                     .padding(.horizontal)
-                        
+                    
                 }
                 .background(Color.white)
                 .clipShape(RoundedShape(corners: [.topLeft, .topRight]))
@@ -84,6 +70,7 @@ struct SignUpView_Previews: PreviewProvider {
 }
 
 // MARK: COMPONENTS
+
 extension SignUpView {
     private var headerView: some View {
         HStack(spacing: 30) {
@@ -94,7 +81,7 @@ extension SignUpView {
                     .font(.title2)
                     .foregroundColor(.white)
             }
-
+            
             Text("Sign Up.")
                 .font(.custom("Roboto-Black", size: 36))
                 .foregroundColor(.white)
@@ -102,6 +89,16 @@ extension SignUpView {
             Spacer()
         }
         .padding(.horizontal)
+    }
+    
+    private var listTextFields: some View {
+        Group {
+            CustomInputField(text: $username, title: "Username", placeholder: "username").padding(.bottom, 18)
+            
+            CustomInputField(text: $email, title: "E-mail", placeholder: "example@email.com").padding(.bottom, 18)
+            
+            CustomSecureInput(text: $password, title: "Password", placeholder: "at least 8 characters").padding(.bottom, 14)
+        }
     }
     
     private var authAction: some View {
@@ -129,16 +126,25 @@ extension SignUpView {
                     Text("Privacy")
                         .foregroundColor(Color("Blue"))
                         .onTapGesture {
-                            print("Show Privacy sheet")
+                            termsIsVisible.toggle()
                         }
                     
                 }.font(.custom("Roboto-Regular", size: 11))
                 
             }
             Spacer()
-
+            
         }
         .padding(.bottom, 27)
+    }
+    
+    private var submitButton: some View {
+        Button {
+            print("Button Login clicked => \(username) \(email) \(password)")
+        } label: {
+            Text("Sign Up")
+                .modifier(TextLargeButtonStyle())
+        }
     }
     
     private var signUpLink: some View {

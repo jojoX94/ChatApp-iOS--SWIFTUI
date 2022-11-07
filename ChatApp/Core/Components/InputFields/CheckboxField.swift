@@ -21,7 +21,7 @@ struct CheckboxField: View {
     let callback: (String, Bool)->()
     
     // MARK: INITIALIZATION
-        
+    
     init(
         id: String,
         label:String,
@@ -29,7 +29,7 @@ struct CheckboxField: View {
         color: Color = Color.black,
         textSize: Int = 14,
         callback: @escaping (String, Bool)->()
-        ) {
+    ) {
         self.id = id
         self.label = label
         self.size = size
@@ -37,7 +37,7 @@ struct CheckboxField: View {
         self.textSize = textSize
         self.callback = callback
     }
-        
+    
     // MARK: BODY
     
     var body: some View {

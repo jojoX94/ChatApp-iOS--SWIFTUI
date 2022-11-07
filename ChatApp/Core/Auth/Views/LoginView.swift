@@ -31,35 +31,22 @@ struct LoginView: View {
                     Image("trip")
                     
                     VStack(spacing: 0) {
-                        CustomInputField(text: $username, title: "Username", placeholder: "username").padding(.bottom, 18)
                         
-                        CustomSecureInput(text: $password, title: "Password", placeholder: "at least 8 characters").padding(.bottom, 14)
+                        listTextFields
                         
                         authAction
                         
-                        Button {
-                            print("Button Login clicked => \(username) \(password)")
-                        } label: {
-                            Text("Login")
-                                .font(.custom("Roboto-Medium", size: 15))
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .foregroundColor(.white)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .foregroundColor(Color("Blue"))
-                                )
-                        }
+                        submitButton
                         
                         Spacer()
                         
                         signUpLink
                         
                         Spacer()
-
+                        
                     }
                     .padding(.horizontal)
-                        
+                    
                 }
                 .background(Color.white)
                 .clipShape(RoundedShape(corners: [.topLeft, .topRight]))
@@ -75,6 +62,7 @@ struct LoginView_Previews: PreviewProvider {
 }
 
 // MARK: COMPONENTS
+
 extension LoginView {
     private var headerView: some View {
         HStack(spacing: 30) {
@@ -85,7 +73,7 @@ extension LoginView {
                     .font(.title2)
                     .foregroundColor(.white)
             }
-
+            
             Text("Log In.")
                 .font(.custom("Roboto-Black", size: 36))
                 .foregroundColor(.white)
@@ -107,9 +95,26 @@ extension LoginView {
                 Text("Forgot Password ?")
                     .font(.custom("Robto-Regular", size: 11))
             }
-
+            
         }
         .padding(.bottom, 27)
+    }
+    
+    private var listTextFields: some View {
+        Group {
+            CustomInputField(text: $username, title: "Username", placeholder: "username").padding(.bottom, 18)
+            
+            CustomSecureInput(text: $password, title: "Password", placeholder: "at least 8 characters").padding(.bottom, 14)
+        }
+    }
+    
+    private var submitButton: some View {
+        Button {
+            print("Button Login clicked => \(username) \(password)")
+        } label: {
+            Text("Login")
+                .modifier(TextLargeButtonStyle())
+        }
     }
     
     private var signUpLink: some View {

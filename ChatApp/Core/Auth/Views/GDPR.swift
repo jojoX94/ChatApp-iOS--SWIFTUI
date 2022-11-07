@@ -46,7 +46,7 @@ struct GDPR: View {
                     .multilineTextAlignment(.leading)
                     .padding(.bottom, 50)
                 
-
+                
                 
                 VStack(spacing: 16) {
                     Button {
@@ -61,7 +61,7 @@ struct GDPR: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(Color("Blue"))
                             )
-                            
+                        
                     }
                     
                     Button {
@@ -76,9 +76,9 @@ struct GDPR: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(Color("Blue"))
                             )
-                            
+                        
                     }
-
+                    
                 }
             }
             .frame(width: UIScreen.screenWidth - 20)
