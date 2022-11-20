@@ -41,7 +41,7 @@ extension MainTabView {
                 case .home:
                     FeedView()
                 case .messages:
-                    Text("messages")
+                    MessageView()
                 case .user:
                     Text("user")
                 case .notifications:
