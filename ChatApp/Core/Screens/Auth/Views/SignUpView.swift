@@ -11,6 +11,8 @@ struct SignUpView: View {
     
     // MARK: PROPERTY
     
+    @StateObject var userViewModel = UserStateViewModel()
+    
     @State var username = ""
     @State var email = ""
     @State var password = ""
@@ -140,7 +142,11 @@ extension SignUpView {
     
     private var submitButton: some View {
         Button {
-            print("Button Login clicked => \(username) \(email) \(password)")
+            Task {
+//                await userViewModel.getAllPRODUCT()
+                await userViewModel.signUp(email: email, password: password)
+                
+            }
         } label: {
             Text("Sign Up")
                 .modifier(TextLargeButtonStyle())
@@ -160,4 +166,5 @@ extension SignUpView {
                 }
         }
     }
+    
 }

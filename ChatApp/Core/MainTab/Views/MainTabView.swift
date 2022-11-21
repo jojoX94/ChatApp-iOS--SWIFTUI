@@ -45,7 +45,7 @@ extension MainTabView {
                 case .user:
                     Text("user")
                 case .notifications:
-                    Text("notifications")
+                   SignUpView()
             }
         }
     }
