@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FeedView: View {
+struct FeedScreen: View {
     
     // MARK: BODY
     
@@ -28,15 +28,15 @@ struct FeedView: View {
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
+struct FeedScreen_Previews: PreviewProvider {
     static var previews: some View {
-        FeedView()
+        FeedScreen()
     }
 }
 
 // MARK: COMPONENTS
 
-extension FeedView {
+extension FeedScreen {
     private var storiesList: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack( spacing: 25) {

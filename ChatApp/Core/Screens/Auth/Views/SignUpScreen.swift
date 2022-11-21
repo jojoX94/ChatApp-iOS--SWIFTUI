@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignUpView: View {
+struct SignUpScreen: View {
     
     // MARK: PROPERTY
     
@@ -65,15 +65,15 @@ struct SignUpView: View {
     }
 }
 
-struct SignUpView_Previews: PreviewProvider {
+struct SignUpScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        SignUpScreen()
     }
 }
 
 // MARK: COMPONENTS
 
-extension SignUpView {
+extension SignUpScreen {
     private var headerView: some View {
         HStack(spacing: 30) {
             Button {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct LoginScreen: View {
     
     // MARK: PROPERTY
     
@@ -55,15 +55,15 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
+struct LoginScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginScreen()
     }
 }
 
 // MARK: COMPONENTS
 
-extension LoginView {
+extension LoginScreen {
     private var headerView: some View {
         HStack(spacing: 30) {
             Button {

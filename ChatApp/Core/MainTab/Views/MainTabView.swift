@@ -20,7 +20,10 @@ struct MainTabView: View {
             ZStack {
                 mainScreen
                 
-                customTabView(geometry: geometry)
+                if !viewRouter.tabBarHidden {
+                    customTabView(geometry: geometry)
+                }
+
             }
         }
     }
@@ -39,13 +42,14 @@ extension MainTabView {
         Group {
             switch viewRouter.currentPage {
                 case .home:
-                    FeedView()
+                    FeedScreen()
                 case .messages:
-                    MessageView()
+                    MessageScreen()
+                        .environmentObject(viewRouter)
                 case .user:
                     Text("user")
                 case .notifications:
-                   SignUpView()
+                   SignUpScreen()
             }
         }
     }

@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct MessageView: View {
+struct MessageScreen: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
     
     @State var textSearch = ""
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 30) {
@@ -56,7 +59,13 @@ struct MessageView: View {
                             
                             LazyVStack(spacing: 20) {
                                 ForEach(0..<20) { _ in
-                                    MessageRowView()
+                                    
+                                    NavigationLink {
+                                        DetailMessageScreen()
+                                    } label: {
+                                        MessageRowView()
+                                    }
+                                    .buttonStyle(PlainButtonStyle())
                                 }
                             }
                         }
@@ -67,12 +76,43 @@ struct MessageView: View {
                 Spacer()
             }
             .padding(.horizontal, 30)
+            .toolbar(content: myToolBarContent)
         }
+
     }
 }
 
-struct MessageView_Previews: PreviewProvider {
+struct MessageScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView()
+        MessageScreen()
+    }
+}
+
+extension MessageScreen {
+    
+    @ToolbarContentBuilder
+    func myToolBarContent() -> some ToolbarContent {
+        ToolbarItem(placement: .navigationBarLeading) {
+            HStack(spacing: 7) {
+                Text("Message")
+                    .font(.custom("Poppins-SemiBold", size: 20))
+            }
+        }
+        ToolbarItem(placement: .navigationBarTrailing) {
+            HStack {
+                IconButton(systemName: "plus.rectangle", badgeCount: 7) {
+                    
+                }
+                    
+                IconButton(systemName: "message", badgeCount: 3) {
+                        
+                }
+
+                IconButton(systemName: "phone", badgeCount: 1) {
+                    
+                }
+            }
+            .foregroundColor(.black)
+        }
     }
 }

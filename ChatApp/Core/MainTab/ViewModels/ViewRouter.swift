@@ -9,13 +9,15 @@ import Foundation
 import SwiftUI
 
 enum Page {
-     case home
-     case messages
-     case user
-     case notifications
+    case home
+    case messages
+    case user
+    case notifications
  }
 
 class ViewRouter: ObservableObject {
     @Published var currentPage: Page = .home
+    
+    @Published var tabBarHidden = false
 }
 
