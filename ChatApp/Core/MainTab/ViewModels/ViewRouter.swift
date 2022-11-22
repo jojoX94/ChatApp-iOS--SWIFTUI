@@ -11,7 +11,7 @@ import SwiftUI
 enum Page {
     case home
     case messages
-    case user
+    case profile
     case notifications
  }
 

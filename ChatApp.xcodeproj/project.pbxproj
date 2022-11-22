@@ -26,6 +26,9 @@
 		4952CE432901865B00B93F91 /* StringTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE422901865B00B93F91 /* StringTransformation.swift */; };
 		4968A372292B74B100D03974 /* MessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A371292B74B100D03974 /* MessageTextField.swift */; };
 		4968A374292BA77C00D03974 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A373292BA77C00D03974 /* IconButton.swift */; };
+		4968A37B292BB15000D03974 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A37A292BB15000D03974 /* ProfileScreen.swift */; };
+		4968A37E292BB64200D03974 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A37D292BB64200D03974 /* CustomLabel.swift */; };
+		4968A380292BBA9400D03974 /* CountLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A37F292BBA9400D03974 /* CountLabel.swift */; };
 		49AF529B292B51AC00420AE1 /* DetailMessageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF529A292B51AC00420AE1 /* DetailMessageScreen.swift */; };
 		49AF529D292B52EB00420AE1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF529C292B52EB00420AE1 /* Message.swift */; };
 		49AF529F292B531F00420AE1 /* ContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF529E292B531F00420AE1 /* ContentMessageView.swift */; };
@@ -86,6 +89,9 @@
 		4952CE422901865B00B93F91 /* StringTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTransformation.swift; sourceTree = "<group>"; };
 		4968A371292B74B100D03974 /* MessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextField.swift; sourceTree = "<group>"; };
 		4968A373292BA77C00D03974 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		4968A37A292BB15000D03974 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		4968A37D292BB64200D03974 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		4968A37F292BBA9400D03974 /* CountLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountLabel.swift; sourceTree = "<group>"; };
 		49AF529A292B51AC00420AE1 /* DetailMessageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMessageScreen.swift; sourceTree = "<group>"; };
 		49AF529C292B52EB00420AE1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		49AF529E292B531F00420AE1 /* ContentMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMessageView.swift; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 		4903639A292A8C4900D0F4A7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4968A377292BB11400D03974 /* Profile */,
 				4952CE2528FFFAAC00B93F91 /* Feeds */,
 				49D7A81C291A2C97009A08C1 /* Messages */,
 				49B515D828FE867E004D30A2 /* Auth */,
@@ -249,6 +256,39 @@
 				4968A371292B74B100D03974 /* MessageTextField.swift */,
 			);
 			path = TextFields;
+			sourceTree = "<group>";
+		};
+		4968A377292BB11400D03974 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4968A378292BB11E00D03974 /* ViewModels */,
+				4968A379292BB12400D03974 /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4968A378292BB11E00D03974 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4968A379292BB12400D03974 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4968A37A292BB15000D03974 /* ProfileScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4968A37C292BB62C00D03974 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				4968A37D292BB64200D03974 /* CustomLabel.swift */,
+				4968A37F292BBA9400D03974 /* CountLabel.swift */,
+			);
+			path = Label;
 			sourceTree = "<group>";
 		};
 		49B5158828FD4F1B004D30A2 = {
@@ -377,6 +417,7 @@
 		49B515A928FD51FC004D30A2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				4968A37C292BB62C00D03974 /* Label */,
 				4968A370292B749700D03974 /* TextFields */,
 				49D7A822291A314A009A08C1 /* Messages */,
 				49D7A81929194AED009A08C1 /* Buttons */,
@@ -583,8 +624,10 @@
 				4952CE3F29011D6600B93F91 /* Color+Extensions.swift in Sources */,
 				4903639C292A8C8800D0F4A7 /* UserResponse.swift in Sources */,
 				4952CE432901865B00B93F91 /* StringTransformation.swift in Sources */,
+				4968A37E292BB64200D03974 /* CustomLabel.swift in Sources */,
 				49B515E228FEA784004D30A2 /* CustomSecureInput.swift in Sources */,
 				49AF529F292B531F00420AE1 /* ContentMessageView.swift in Sources */,
+				4968A380292BBA9400D03974 /* CountLabel.swift in Sources */,
 				4952CE37290030A000B93F91 /* StoryRowView.swift in Sources */,
 				4952CE2428FFD6C100B93F91 /* SignUpScreen.swift in Sources */,
 				4952CE3D29011C2000B93F91 /* TweetView.swift in Sources */,
@@ -601,6 +644,7 @@
 				4968A372292B74B100D03974 /* MessageTextField.swift in Sources */,
 				49B5159528FD4F1B004D30A2 /* ChatAppApp.swift in Sources */,
 				4952CE4129011FD700B93F91 /* CustomIcon.swift in Sources */,
+				4968A37B292BB15000D03974 /* ProfileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

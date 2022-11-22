@@ -46,8 +46,8 @@ extension MainTabView {
                 case .messages:
                     MessageScreen()
                         .environmentObject(viewRouter)
-                case .user:
-                    Text("user")
+                case .profile:
+                    ProfileScreen()
                 case .notifications:
                    SignUpScreen()
             }
@@ -83,7 +83,7 @@ extension MainTabView {
                 
                 
                 
-                TabBarIcon(viewRouter: viewRouter, assignedPage: .user, iconName: "ProfileIconTab")
+                TabBarIcon(viewRouter: viewRouter, assignedPage: .profile, iconName: "ProfileIconTab")
                 
                 Spacer()
                 
