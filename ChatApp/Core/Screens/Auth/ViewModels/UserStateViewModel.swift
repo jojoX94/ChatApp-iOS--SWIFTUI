@@ -13,6 +13,10 @@ class UserStateViewModel: ObservableObject {
     @Published var isLoggedIn = false
     @Published var isBusy = false
     
+    init() {
+        
+    }
+    
     func signUp(email: String, password: String) async -> UserResponse? {
         isBusy = true
         do{

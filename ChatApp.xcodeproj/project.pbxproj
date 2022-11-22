@@ -24,6 +24,7 @@
 		4952CE3F29011D6600B93F91 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE3E29011D6600B93F91 /* Color+Extensions.swift */; };
 		4952CE4129011FD700B93F91 /* CustomIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE4029011FD700B93F91 /* CustomIcon.swift */; };
 		4952CE432901865B00B93F91 /* StringTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE422901865B00B93F91 /* StringTransformation.swift */; };
+		495B1FEF292CA20600496C0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 495B1FEE292CA20600496C0D /* GoogleService-Info.plist */; };
 		4968A372292B74B100D03974 /* MessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A371292B74B100D03974 /* MessageTextField.swift */; };
 		4968A374292BA77C00D03974 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A373292BA77C00D03974 /* IconButton.swift */; };
 		4968A37B292BB15000D03974 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A37A292BB15000D03974 /* ProfileScreen.swift */; };
@@ -87,6 +88,7 @@
 		4952CE3E29011D6600B93F91 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		4952CE4029011FD700B93F91 /* CustomIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIcon.swift; sourceTree = "<group>"; };
 		4952CE422901865B00B93F91 /* StringTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTransformation.swift; sourceTree = "<group>"; };
+		495B1FEE292CA20600496C0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4968A371292B74B100D03974 /* MessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextField.swift; sourceTree = "<group>"; };
 		4968A373292BA77C00D03974 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		4968A37A292BB15000D03974 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 		49B5159328FD4F1B004D30A2 /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				495B1FEE292CA20600496C0D /* GoogleService-Info.plist */,
 				49B515D728FE73DC004D30A2 /* Info.plist */,
 				49B515A428FD4FD7004D30A2 /* Models */,
 				49B515A528FD4FDD004D30A2 /* Services */,
@@ -586,6 +589,7 @@
 				49B515CE28FE7374004D30A2 /* Roboto-Medium.ttf in Resources */,
 				49B515D328FE7374004D30A2 /* Roboto-BlackItalic.ttf in Resources */,
 				49B515D528FE7374004D30A2 /* Poppins-Thin.ttf in Resources */,
+				495B1FEF292CA20600496C0D /* GoogleService-Info.plist in Resources */,
 				49B515C528FE7374004D30A2 /* Roboto-Bold.ttf in Resources */,
 				49B515C328FE7374004D30A2 /* Poppins-Medium.ttf in Resources */,
 				49B515BF28FE7317004D30A2 /* Poppins-Bold.ttf in Resources */,
