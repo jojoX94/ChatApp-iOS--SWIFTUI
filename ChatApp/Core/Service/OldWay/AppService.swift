@@ -19,6 +19,12 @@ class AppService {
         AuthEndpoint.loginUser(email: email, password: password, completion)
     }
     
+    //MARK: Products
+    
+    static func Products(completion: @escaping(_ responseCode: Int?, _ response: [Product]?) -> Void) -> Void {
+        ProductsEndPoint.Products(completion: completion)
+    }
+    
 //    static func OldVersion_Products(_ completion: @escaping (_ statusCode: Int?, _ products: [Producct]?) ) -> Void {
 //        
 //    }

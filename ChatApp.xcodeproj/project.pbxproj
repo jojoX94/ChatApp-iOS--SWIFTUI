@@ -42,6 +42,7 @@
 		4952CE4129011FD700B93F91 /* CustomIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE4029011FD700B93F91 /* CustomIcon.swift */; };
 		4952CE432901865B00B93F91 /* StringTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE422901865B00B93F91 /* StringTransformation.swift */; };
 		495B1FEF292CA20600496C0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 495B1FEE292CA20600496C0D /* GoogleService-Info.plist */; };
+		495B97C4292FB94F00964551 /* ASProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97C3292FB94F00964551 /* ASProduct.swift */; };
 		4968A372292B74B100D03974 /* MessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A371292B74B100D03974 /* MessageTextField.swift */; };
 		4968A374292BA77C00D03974 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A373292BA77C00D03974 /* IconButton.swift */; };
 		4968A37B292BB15000D03974 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A37A292BB15000D03974 /* ProfileScreen.swift */; };
@@ -120,6 +121,7 @@
 		4952CE4029011FD700B93F91 /* CustomIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIcon.swift; sourceTree = "<group>"; };
 		4952CE422901865B00B93F91 /* StringTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTransformation.swift; sourceTree = "<group>"; };
 		495B1FEE292CA20600496C0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		495B97C3292FB94F00964551 /* ASProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASProduct.swift; sourceTree = "<group>"; };
 		4968A371292B74B100D03974 /* MessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextField.swift; sourceTree = "<group>"; };
 		4968A373292BA77C00D03974 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		4968A37A292BB15000D03974 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			children = (
 				490A1B1C292F4E1F000A38F0 /* ProductResponse.swift */,
 				490A1B19292F4DDE000A38F0 /* ProductEndPoint.swift */,
+				495B97C3292FB94F00964551 /* ASProduct.swift */,
 			);
 			path = Product;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			children = (
 				490A1B35292FB272000A38F0 /* SignIn */,
 				490A1B28292F9C1B000A38F0 /* SignUp */,
+				490A1B2A292F9C57000A38F0 /* SignUpResponse.swift */,
 				490A1B2F292FA7E4000A38F0 /* AuthEndpoint.swift */,
 			);
 			path = Authentification;
@@ -267,7 +271,6 @@
 		490A1B28292F9C1B000A38F0 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				490A1B2A292F9C57000A38F0 /* SignUpResponse.swift */,
 				490A1B33292FAAC4000A38F0 /* SignUpBody.swift */,
 			);
 			path = SignUp;
@@ -733,6 +736,7 @@
 				490A1B13292F474A000A38F0 /* AppService.swift in Sources */,
 				49AF529B292B51AC00420AE1 /* DetailMessageScreen.swift in Sources */,
 				49AF52A3292B571200420AE1 /* MessageView.swift in Sources */,
+				495B97C4292FB94F00964551 /* ASProduct.swift in Sources */,
 				4923A10C2913EC640050ABBE /* TabBarIcon.swift in Sources */,
 				490A1B22292F4FA4000A38F0 /* KeyChainItemAccessibility.swift in Sources */,
 				490A1B3A292FB301000A38F0 /* SignInResponse.swift in Sources */,

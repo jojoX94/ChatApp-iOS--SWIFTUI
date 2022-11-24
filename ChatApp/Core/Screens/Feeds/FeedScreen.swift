@@ -9,6 +9,8 @@ import SwiftUI
 
 struct FeedScreen: View {
     
+    @StateObject var productsVM = ProductViewModel()
+    
     // MARK: BODY
     
     var body: some View {

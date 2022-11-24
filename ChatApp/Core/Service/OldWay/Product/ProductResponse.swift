@@ -5,5 +5,26 @@
 //  Created by Madiapps on 24/11/2022.
 //
 
-import Foundation
+import ObjectMapper
 
+struct Product {
+    var _id: String
+    var name: String
+    var description: String
+}
+
+struct ProductResponse: Mappable {
+    
+    var count: Int
+    var data = [ASProduct]()
+    
+    init?(map: Map) {
+        count = 0
+        data =  [ASProduct]()
+    }
+    
+    mutating func mapping(map: Map) {
+        count <- map["count"]
+        data <- map["data"]
+    }
+}

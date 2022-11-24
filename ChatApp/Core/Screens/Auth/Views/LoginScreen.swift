@@ -121,6 +121,10 @@ extension LoginScreen {
                 await userViewModel.login_v1(email: email, password: password) { responseCode, response in
                     if responseCode == 200 {
                         userViewModel.isLoggedIn = true
+                        if let response = response {
+                            KeychainWrapper.standard.set(response.accessToken, forKey: Defaults.accessToken)
+                        }
+                        
                     }
                 }
                 
