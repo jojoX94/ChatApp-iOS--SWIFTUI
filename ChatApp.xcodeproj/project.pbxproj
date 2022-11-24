@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		49036398292A80A400D0F4A7 /* UserStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49036397292A80A400D0F4A7 /* UserStateViewModel.swift */; };
 		4903639C292A8C8800D0F4A7 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4903639B292A8C8800D0F4A7 /* UserResponse.swift */; };
+		490A1B0A292D0518000A38F0 /* QRGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1B09292D0518000A38F0 /* QRGeneratorView.swift */; };
+		490A1B0D292D0B73000A38F0 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 490A1B0C292D0B73000A38F0 /* CodeScanner */; };
+		490A1B11292F3C59000A38F0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 490A1B10292F3C59000A38F0 /* Alamofire */; };
 		4923A10929129AB50050ABBE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923A10829129AB50050ABBE /* MainTabView.swift */; };
 		4923A10C2913EC640050ABBE /* TabBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923A10B2913EC640050ABBE /* TabBarIcon.swift */; };
 		4952CE2428FFD6C100B93F91 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE2328FFD6C100B93F91 /* SignUpScreen.swift */; };
@@ -73,6 +76,7 @@
 /* Begin PBXFileReference section */
 		49036397292A80A400D0F4A7 /* UserStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStateViewModel.swift; sourceTree = "<group>"; };
 		4903639B292A8C8800D0F4A7 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		490A1B09292D0518000A38F0 /* QRGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorView.swift; sourceTree = "<group>"; };
 		4923A10829129AB50050ABBE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		4923A10B2913EC640050ABBE /* TabBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarIcon.swift; sourceTree = "<group>"; };
 		4952CE2328FFD6C100B93F91 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490A1B0D292D0B73000A38F0 /* CodeScanner in Frameworks */,
+				490A1B11292F3C59000A38F0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +171,21 @@
 				49B515D828FE867E004D30A2 /* Auth */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		490A1B08292D04EA000A38F0 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				490A1B09292D0518000A38F0 /* QRGeneratorView.swift */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		490A1B0E292E0959000A38F0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		4923A10729129A9B0050ABBE /* MainTab */ = {
@@ -369,6 +390,7 @@
 		49B515A628FD4FE7004D30A2 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				490A1B0E292E0959000A38F0 /* Service */,
 				49036399292A8C3000D0F4A7 /* Models */,
 				49B515A928FD51FC004D30A2 /* Components */,
 				4923A10729129A9B0050ABBE /* MainTab */,
@@ -420,6 +442,7 @@
 		49B515A928FD51FC004D30A2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				490A1B08292D04EA000A38F0 /* QRCode */,
 				4968A37C292BB62C00D03974 /* Label */,
 				4968A370292B749700D03974 /* TextFields */,
 				49D7A822291A314A009A08C1 /* Messages */,
@@ -536,6 +559,10 @@
 			dependencies = (
 			);
 			name = ChatApp;
+			packageProductDependencies = (
+				490A1B0C292D0B73000A38F0 /* CodeScanner */,
+				490A1B10292F3C59000A38F0 /* Alamofire */,
+			);
 			productName = ChatApp;
 			productReference = 49B5159128FD4F1B004D30A2 /* ChatApp.app */;
 			productType = "com.apple.product-type.application";
@@ -564,6 +591,10 @@
 				Base,
 			);
 			mainGroup = 49B5158828FD4F1B004D30A2;
+			packageReferences = (
+				490A1B0B292D0B73000A38F0 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				490A1B0F292F3C59000A38F0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 49B5159228FD4F1B004D30A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -627,6 +658,7 @@
 				49D7A826291A3185009A08C1 /* MessageRowView.swift in Sources */,
 				4952CE3F29011D6600B93F91 /* Color+Extensions.swift in Sources */,
 				4903639C292A8C8800D0F4A7 /* UserResponse.swift in Sources */,
+				490A1B0A292D0518000A38F0 /* QRGeneratorView.swift in Sources */,
 				4952CE432901865B00B93F91 /* StringTransformation.swift in Sources */,
 				4968A37E292BB64200D03974 /* CustomLabel.swift in Sources */,
 				49B515E228FEA784004D30A2 /* CustomSecureInput.swift in Sources */,
@@ -782,6 +814,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BizTalks;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to scan the qrcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -812,6 +845,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChatApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = BizTalks;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to scan the qrcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -851,6 +885,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		490A1B0B292D0B73000A38F0 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		490A1B0F292F3C59000A38F0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		490A1B0C292D0B73000A38F0 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 490A1B0B292D0B73000A38F0 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+		490A1B10292F3C59000A38F0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 490A1B0F292F3C59000A38F0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 49B5158928FD4F1B004D30A2 /* Project object */;
 }
