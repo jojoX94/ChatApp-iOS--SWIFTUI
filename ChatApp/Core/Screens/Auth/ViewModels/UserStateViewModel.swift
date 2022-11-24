@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 @MainActor
 class UserStateViewModel: ObservableObject {
@@ -14,7 +15,19 @@ class UserStateViewModel: ObservableObject {
     @Published var isBusy = false
     
     init() {
+        isLoggedIn = verifyIfUserLoggeIn()
+    }
+    
+    fileprivate func verifyIfUserLoggeIn() -> Bool {
+        let keychain = KeychainWrapper.standard
+        let pusherId = keychain.string(forKey: Defaults.pushUserId)
         
+        if let pusherId = pusherId, !pusherId.isEmpty {
+            return true
+        } else {
+            keychain.set(UIDevice.current.identifierForVendor!.uuidString, forKey: Defaults.pushUserId)
+            return false
+        }
     }
     
     func signUp(email: String, password: String) async -> UserResponse? {
