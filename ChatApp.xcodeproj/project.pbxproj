@@ -19,6 +19,13 @@
 		490A1B20292F4F81000A38F0 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1B1F292F4F81000A38F0 /* KeychainWrapper.swift */; };
 		490A1B22292F4FA4000A38F0 /* KeyChainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1B21292F4FA4000A38F0 /* KeyChainItemAccessibility.swift */; };
 		490A1B25292F96EE000A38F0 /* Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1B24292F96EE000A38F0 /* Default.swift */; };
+		490A1B2B292F9C57000A38F0 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1B2A292F9C57000A38F0 /* SignUpResponse.swift */; };
+		490A1B2E292FA20D000A38F0 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = 490A1B2D292FA20D000A38F0 /* ObjectMapper */; };
+		490A1B30292FA7E4000A38F0 /* AuthEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1B2F292FA7E4000A38F0 /* AuthEndpoint.swift */; };
+		490A1B32292FA80F000A38F0 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1B31292FA80F000A38F0 /* BaseService.swift */; };
+		490A1B34292FAAC4000A38F0 /* SignUpBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1B33292FAAC4000A38F0 /* SignUpBody.swift */; };
+		490A1B38292FB2C3000A38F0 /* SignInBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1B37292FB2C3000A38F0 /* SignInBody.swift */; };
+		490A1B3A292FB301000A38F0 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1B39292FB301000A38F0 /* SignInResponse.swift */; };
 		4923A10929129AB50050ABBE /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923A10829129AB50050ABBE /* MainTabView.swift */; };
 		4923A10C2913EC640050ABBE /* TabBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923A10B2913EC640050ABBE /* TabBarIcon.swift */; };
 		4952CE2428FFD6C100B93F91 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4952CE2328FFD6C100B93F91 /* SignUpScreen.swift */; };
@@ -91,6 +98,12 @@
 		490A1B1F292F4F81000A38F0 /* KeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		490A1B21292F4FA4000A38F0 /* KeyChainItemAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainItemAccessibility.swift; sourceTree = "<group>"; };
 		490A1B24292F96EE000A38F0 /* Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Default.swift; sourceTree = "<group>"; };
+		490A1B2A292F9C57000A38F0 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		490A1B2F292FA7E4000A38F0 /* AuthEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoint.swift; sourceTree = "<group>"; };
+		490A1B31292FA80F000A38F0 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		490A1B33292FAAC4000A38F0 /* SignUpBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBody.swift; sourceTree = "<group>"; };
+		490A1B37292FB2C3000A38F0 /* SignInBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInBody.swift; sourceTree = "<group>"; };
+		490A1B39292FB301000A38F0 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 		4923A10829129AB50050ABBE /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		4923A10B2913EC640050ABBE /* TabBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarIcon.swift; sourceTree = "<group>"; };
 		4952CE2328FFD6C100B93F91 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
@@ -159,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490A1B2E292FA20D000A38F0 /* ObjectMapper in Frameworks */,
 				490A1B0D292D0B73000A38F0 /* CodeScanner in Frameworks */,
 				490A1B11292F3C59000A38F0 /* Alamofire in Frameworks */,
 			);
@@ -198,8 +212,7 @@
 		490A1B0E292E0959000A38F0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				490A1B16292F4D6C000A38F0 /* Product */,
-				490A1B12292F474A000A38F0 /* AppService.swift */,
+				490A1B26292F9ADE000A38F0 /* OldWay */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -207,18 +220,10 @@
 		490A1B16292F4D6C000A38F0 /* Product */ = {
 			isa = PBXGroup;
 			children = (
-				490A1B1B292F4E07000A38F0 /* Response */,
+				490A1B1C292F4E1F000A38F0 /* ProductResponse.swift */,
 				490A1B19292F4DDE000A38F0 /* ProductEndPoint.swift */,
 			);
 			path = Product;
-			sourceTree = "<group>";
-		};
-		490A1B1B292F4E07000A38F0 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-				490A1B1C292F4E1F000A38F0 /* ProductResponse.swift */,
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		490A1B1E292F4EA8000A38F0 /* KeyChain */ = {
@@ -236,6 +241,45 @@
 				490A1B24292F96EE000A38F0 /* Default.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		490A1B26292F9ADE000A38F0 /* OldWay */ = {
+			isa = PBXGroup;
+			children = (
+				490A1B27292F9C03000A38F0 /* Authentification */,
+				490A1B16292F4D6C000A38F0 /* Product */,
+				490A1B12292F474A000A38F0 /* AppService.swift */,
+				490A1B31292FA80F000A38F0 /* BaseService.swift */,
+			);
+			path = OldWay;
+			sourceTree = "<group>";
+		};
+		490A1B27292F9C03000A38F0 /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				490A1B35292FB272000A38F0 /* SignIn */,
+				490A1B28292F9C1B000A38F0 /* SignUp */,
+				490A1B2F292FA7E4000A38F0 /* AuthEndpoint.swift */,
+			);
+			path = Authentification;
+			sourceTree = "<group>";
+		};
+		490A1B28292F9C1B000A38F0 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				490A1B2A292F9C57000A38F0 /* SignUpResponse.swift */,
+				490A1B33292FAAC4000A38F0 /* SignUpBody.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		490A1B35292FB272000A38F0 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				490A1B37292FB2C3000A38F0 /* SignInBody.swift */,
+				490A1B39292FB301000A38F0 /* SignInResponse.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		4923A10729129A9B0050ABBE /* MainTab */ = {
@@ -599,6 +643,7 @@
 			packageProductDependencies = (
 				490A1B0C292D0B73000A38F0 /* CodeScanner */,
 				490A1B10292F3C59000A38F0 /* Alamofire */,
+				490A1B2D292FA20D000A38F0 /* ObjectMapper */,
 			);
 			productName = ChatApp;
 			productReference = 49B5159128FD4F1B004D30A2 /* ChatApp.app */;
@@ -631,6 +676,7 @@
 			packageReferences = (
 				490A1B0B292D0B73000A38F0 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				490A1B0F292F3C59000A38F0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				490A1B2C292FA20D000A38F0 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 			);
 			productRefGroup = 49B5159228FD4F1B004D30A2 /* Products */;
 			projectDirPath = "";
@@ -689,8 +735,12 @@
 				49AF52A3292B571200420AE1 /* MessageView.swift in Sources */,
 				4923A10C2913EC640050ABBE /* TabBarIcon.swift in Sources */,
 				490A1B22292F4FA4000A38F0 /* KeyChainItemAccessibility.swift in Sources */,
+				490A1B3A292FB301000A38F0 /* SignInResponse.swift in Sources */,
 				49B515E028FEA524004D30A2 /* CustomInputField.swift in Sources */,
+				490A1B34292FAAC4000A38F0 /* SignUpBody.swift in Sources */,
 				4952CE2C290014E600B93F91 /* GDPR.swift in Sources */,
+				490A1B38292FB2C3000A38F0 /* SignInBody.swift in Sources */,
+				490A1B32292FA80F000A38F0 /* BaseService.swift in Sources */,
 				4952CE39290034FC00B93F91 /* FeedScreen.swift in Sources */,
 				49D7A821291A2D1C009A08C1 /* MessageScreen.swift in Sources */,
 				49D7A81B29194CCE009A08C1 /* TextLargeButtonStyle.swift in Sources */,
@@ -711,6 +761,7 @@
 				4923A10929129AB50050ABBE /* MainTabView.swift in Sources */,
 				49B515E628FEC569004D30A2 /* CheckboxField.swift in Sources */,
 				4952CE342900267200B93F91 /* UIScreen+Extensions.swift in Sources */,
+				490A1B30292FA7E4000A38F0 /* AuthEndpoint.swift in Sources */,
 				49AF529D292B52EB00420AE1 /* Message.swift in Sources */,
 				49D7A818291925AC009A08C1 /* ViewRouter.swift in Sources */,
 				490A1B20292F4F81000A38F0 /* KeychainWrapper.swift in Sources */,
@@ -722,6 +773,7 @@
 				4968A372292B74B100D03974 /* MessageTextField.swift in Sources */,
 				490A1B25292F96EE000A38F0 /* Default.swift in Sources */,
 				49B5159528FD4F1B004D30A2 /* ChatAppApp.swift in Sources */,
+				490A1B2B292F9C57000A38F0 /* SignUpResponse.swift in Sources */,
 				4952CE4129011FD700B93F91 /* CustomIcon.swift in Sources */,
 				4968A37B292BB15000D03974 /* ProfileScreen.swift in Sources */,
 				490A1B15292F4BED000A38F0 /* ProductViewModel.swift in Sources */,
@@ -947,6 +999,14 @@
 				kind = branch;
 			};
 		};
+		490A1B2C292FA20D000A38F0 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -959,6 +1019,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 490A1B0F292F3C59000A38F0 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		490A1B2D292FA20D000A38F0 /* ObjectMapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 490A1B2C292FA20D000A38F0 /* XCRemoteSwiftPackageReference "ObjectMapper" */;
+			productName = ObjectMapper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

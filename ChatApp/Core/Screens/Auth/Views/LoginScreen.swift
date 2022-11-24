@@ -11,7 +11,7 @@ struct LoginScreen: View {
     
     // MARK: PROPERTY
     
-    @State var username = ""
+    @State var email = ""
     @State var password = ""
     @State var isRememberMe = false
     
@@ -108,7 +108,7 @@ extension LoginScreen {
     
     private var listTextFields: some View {
         Group {
-            CustomInputField(text: $username, title: "Username", placeholder: "username").padding(.bottom, 18)
+            CustomInputField(text: $email, title: "email", placeholder: "email").padding(.bottom, 18)
             
             CustomSecureInput(text: $password, title: "Password", placeholder: "at least 8 characters").padding(.bottom, 14)
         }
@@ -116,8 +116,14 @@ extension LoginScreen {
     
     private var submitButton: some View {
         Button {
-            withAnimation(.easeIn) {
-                userViewModel.isLoggedIn = true
+            Task {
+                
+                await userViewModel.login_v1(email: email, password: password) { responseCode, response in
+                    if responseCode == 200 {
+                        userViewModel.isLoggedIn = true
+                    }
+                }
+                
             }
         } label: {
             Text("Login")

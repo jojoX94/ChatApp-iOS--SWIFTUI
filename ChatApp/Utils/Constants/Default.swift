@@ -14,4 +14,6 @@ struct Defaults {
     static let refreshToken = "RefreshToken"
     
     static let userName = "UserName"
+    
+    static let firstTimeLaunchOccurred = "firstTimeLaunchOccurred"
 }

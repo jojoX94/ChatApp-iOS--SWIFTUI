@@ -22,6 +22,11 @@ class UserStateViewModel: ObservableObject {
         let keychain = KeychainWrapper.standard
         let pusherId = keychain.string(forKey: Defaults.pushUserId)
         
+        if UserDefaults.standard.bool(forKey: Defaults.firstTimeLaunchOccurred) {
+            KeychainWrapper.standard.removeAllKeys()
+            UserDefaults.standard.set(false, forKey: Defaults.firstTimeLaunchOccurred)
+        }
+        
         if let pusherId = pusherId, !pusherId.isEmpty {
             return true
         } else {
@@ -30,7 +35,20 @@ class UserStateViewModel: ObservableObject {
         }
     }
     
-    func signUp(email: String, password: String) async -> UserResponse? {
+    func login_v1(email: String, password: String,  _ completion: @escaping(_ responseCode: Int?, _ response: SignInResponse?) -> Void) async -> Void {
+        AppService.loginUser(email: email, password: password) { responseCode, response in
+            completion(responseCode, response)
+        }
+    }
+    
+    
+    func signUp_v1(name: String, email: String, password: String) async -> Void {
+        await AppService.registerUser(name: name, email: email, password: password) { responseCode, response in
+            
+        }
+    }
+    
+    func signUp_v0(email: String, password: String) async -> UserResponse? {
         isBusy = true
         do{
             guard let url = URL(string: "http://10.13.104.203:3000/api/v1/signup") else { fatalError("Missing Url")}

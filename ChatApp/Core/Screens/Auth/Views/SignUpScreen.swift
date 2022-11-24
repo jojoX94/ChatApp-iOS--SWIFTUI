@@ -21,7 +21,7 @@ struct SignUpScreen: View {
     @State var privacyIsVisible = false
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+    @EnvironmentObject var userViewModel: UserStateViewModel
     
     // MARK: BODY
     
@@ -143,6 +143,7 @@ extension SignUpScreen {
     private var submitButton: some View {
         Button {
             Task {
+                await userViewModel.signUp_v1(name: username, email: email, password: password)
 //                await userViewModel.getAllPRODUCT()
 //                await userViewModel.signUp(email: email, password: password)
                 
