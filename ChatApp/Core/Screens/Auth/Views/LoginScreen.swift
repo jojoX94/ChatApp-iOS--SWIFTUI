@@ -15,43 +15,49 @@ struct LoginScreen: View {
     @State var password = ""
     @State var isRememberMe = false
     
+    @EnvironmentObject var userViewModel: UserStateViewModel
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
     
     // MARK: BODY
     
     var body: some View {
-        ZStack {
-            
-            Color("Blue")
-                .ignoresSafeArea(.all, edges: .top)
-            
-            VStack {
-                headerView
+        NavigationStack {
+            ZStack {
                 
-                VStack(spacing: 0) {
-                    Image("trip")
+                Color("Blue")
+                    .ignoresSafeArea(.all, edges: .top)
+                
+                VStack {
+                    headerView
                     
                     VStack(spacing: 0) {
+                        Image("trip")
                         
-                        listTextFields
-                        
-                        authAction
-                        
-                        submitButton
-                        
-                        Spacer()
-                        
-                        signUpLink
-                        
-                        Spacer()
+                        VStack(spacing: 0) {
+                            
+                            listTextFields
+                            
+                            authAction
+                            
+                            submitButton
+                            
+                            Spacer()
+                            
+                            signUpLink
+                            
+                            Spacer()
+                            
+                        }
+                        .padding(.horizontal)
                         
                     }
-                    .padding(.horizontal)
-                    
+                    .background(Color.white)
+                    .clipShape(RoundedShape(corners: [.topLeft, .topRight]))
                 }
-                .background(Color.white)
-                .clipShape(RoundedShape(corners: [.topLeft, .topRight]))
             }
         }
+        
     }
 }
 
@@ -67,7 +73,7 @@ extension LoginScreen {
     private var headerView: some View {
         HStack(spacing: 30) {
             Button {
-                print("Back button clicked")
+                presentationMode.wrappedValue.dismiss()
             } label: {
                 Image(systemName: "chevron.backward")
                     .font(.title2)
@@ -110,7 +116,9 @@ extension LoginScreen {
     
     private var submitButton: some View {
         Button {
-            print("Button Login clicked => \(username) \(password)")
+            withAnimation(.easeIn) {
+                userViewModel.isLoggedIn = true
+            }
         } label: {
             Text("Login")
                 .modifier(TextLargeButtonStyle())
@@ -120,14 +128,15 @@ extension LoginScreen {
     private var signUpLink: some View {
         HStack {
             Text("Don't have an account?")
-                .font(.custom("Roboto-Light", size: 11))
                 .foregroundColor(.black.opacity(0.9))
-            Text("Sign Up")
-                .font(.custom("Roboto-Medium", size: 11))
-                .foregroundColor(Color("Blue"))
-                .onTapGesture {
-                    print("Button Sign Up Tapped")
-                }
+            NavigationLink(destination: {
+                SignUpScreen()
+                    .navigationBarBackButtonHidden(true)
+            }, label: {
+                Text("Sign Up")
+                   
+            })
         }
+        .font(.custom("Roboto-Medium", size: 11))
     }
 }

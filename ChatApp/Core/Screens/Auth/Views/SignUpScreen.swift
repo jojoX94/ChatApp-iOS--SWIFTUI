@@ -11,8 +11,6 @@ struct SignUpScreen: View {
     
     // MARK: PROPERTY
     
-    @StateObject var userViewModel = UserStateViewModel()
-    
     @State var username = ""
     @State var email = ""
     @State var password = ""
@@ -21,6 +19,8 @@ struct SignUpScreen: View {
     @State var isMarked = false
     @State var termsIsVisible = false
     @State var privacyIsVisible = false
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     
     // MARK: BODY
@@ -77,7 +77,7 @@ extension SignUpScreen {
     private var headerView: some View {
         HStack(spacing: 30) {
             Button {
-                print("Back button clicked")
+                presentationMode.wrappedValue.dismiss()
             } label: {
                 Image(systemName: "chevron.backward")
                     .font(.title2)
@@ -144,7 +144,7 @@ extension SignUpScreen {
         Button {
             Task {
 //                await userViewModel.getAllPRODUCT()
-                await userViewModel.signUp(email: email, password: password)
+//                await userViewModel.signUp(email: email, password: password)
                 
             }
         } label: {
@@ -156,15 +156,18 @@ extension SignUpScreen {
     private var signUpLink: some View {
         HStack {
             Text("I'm already an account.")
-                .font(.custom("Roboto-Light", size: 11))
                 .foregroundColor(.black.opacity(0.9))
-            Text("Sign In")
-                .font(.custom("Roboto-Medium", size: 11))
-                .foregroundColor(Color("Blue"))
-                .onTapGesture {
-                    print("Button Sign Up Tapped")
-                }
+            NavigationLink {
+                LoginScreen()
+                    .navigationBarBackButtonHidden(true)
+            } label: {
+                Text("Sign In")
+                    .foregroundColor(Color("Blue"))
+            }
+
+            
         }
+        .font(.custom("Roboto-Light", size: 11))
     }
     
 }
