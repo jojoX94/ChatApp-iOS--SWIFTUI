@@ -44,6 +44,7 @@
 		495B1FEF292CA20600496C0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 495B1FEE292CA20600496C0D /* GoogleService-Info.plist */; };
 		495B97C4292FB94F00964551 /* ASProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97C3292FB94F00964551 /* ASProduct.swift */; };
 		495B97C72930975A00964551 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97C62930975A00964551 /* LoadingView.swift */; };
+		495B97CA2930DD4F00964551 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97C92930DD4F00964551 /* SplashScreen.swift */; };
 		4968A372292B74B100D03974 /* MessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A371292B74B100D03974 /* MessageTextField.swift */; };
 		4968A374292BA77C00D03974 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A373292BA77C00D03974 /* IconButton.swift */; };
 		4968A37B292BB15000D03974 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A37A292BB15000D03974 /* ProfileScreen.swift */; };
@@ -124,6 +125,7 @@
 		495B1FEE292CA20600496C0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		495B97C3292FB94F00964551 /* ASProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASProduct.swift; sourceTree = "<group>"; };
 		495B97C62930975A00964551 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		495B97C92930DD4F00964551 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		4968A371292B74B100D03974 /* MessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextField.swift; sourceTree = "<group>"; };
 		4968A373292BA77C00D03974 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		4968A37A292BB15000D03974 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		4903639A292A8C4900D0F4A7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				495B97C82930DD3B00964551 /* Spash */,
 				4968A377292BB11400D03974 /* Profile */,
 				4952CE2528FFFAAC00B93F91 /* Feeds */,
 				49D7A81C291A2C97009A08C1 /* Messages */,
@@ -379,6 +382,14 @@
 				495B97C62930975A00964551 /* LoadingView.swift */,
 			);
 			path = Loader;
+			sourceTree = "<group>";
+		};
+		495B97C82930DD3B00964551 /* Spash */ = {
+			isa = PBXGroup;
+			children = (
+				495B97C92930DD4F00964551 /* SplashScreen.swift */,
+			);
+			path = Spash;
 			sourceTree = "<group>";
 		};
 		4968A370292B749700D03974 /* TextFields */ = {
@@ -752,6 +763,7 @@
 				490A1B22292F4FA4000A38F0 /* KeyChainItemAccessibility.swift in Sources */,
 				490A1B3A292FB301000A38F0 /* SignInResponse.swift in Sources */,
 				49B515E028FEA524004D30A2 /* CustomInputField.swift in Sources */,
+				495B97CA2930DD4F00964551 /* SplashScreen.swift in Sources */,
 				490A1B34292FAAC4000A38F0 /* SignUpBody.swift in Sources */,
 				4952CE2C290014E600B93F91 /* GDPR.swift in Sources */,
 				490A1B38292FB2C3000A38F0 /* SignInBody.swift in Sources */,

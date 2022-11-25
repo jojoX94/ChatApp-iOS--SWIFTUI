@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct ChatAppApp: App {
+    @State private var isActive = false
     let tabBar = UITabBar.appearance()
     let appearance: UITabBarAppearance = UITabBarAppearance()
     
@@ -23,7 +24,11 @@ struct ChatAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isActive {
+                ContentView()
+            } else {
+                SplashScreen(isActive: $isActive)
+            }
         }
     }
 }
