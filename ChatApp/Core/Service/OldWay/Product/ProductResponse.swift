@@ -7,12 +7,6 @@
 
 import ObjectMapper
 
-struct Product {
-    var _id: String
-    var name: String
-    var description: String
-}
-
 struct ProductResponse: Mappable {
     
     var count: Int

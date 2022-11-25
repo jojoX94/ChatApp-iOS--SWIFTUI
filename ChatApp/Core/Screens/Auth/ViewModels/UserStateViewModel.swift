@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+import Combine
 
 @MainActor
 class UserStateViewModel: ObservableObject {
@@ -14,7 +14,11 @@ class UserStateViewModel: ObservableObject {
     @Published var isLoggedIn = false
     @Published var isBusy = false
     
-    init() {
+    private var cancellableSet: Set<AnyCancellable> = []
+    var dataManager: ServiceProtocol
+    
+    init(dataManager: ServiceProtocol = Service.shared) {
+        self.dataManager = dataManager
         isLoggedIn = verifyIfUserLoggeIn()
     }
     
@@ -40,6 +44,18 @@ class UserStateViewModel: ObservableObject {
             #endif
             return false
         }
+    }
+    
+    func signUp_v2(name: String, email: String, password: String) async -> Void {
+        dataManager
+            .registerUser(name: name, email: email, password: password)
+            .sink { (dataResponse) in
+                if dataResponse.error != nil {
+                    
+                } else {
+                    
+                }
+            }.store(in: &cancellableSet)
     }
     
     func login_v1(email: String, password: String,  _ completion: @escaping(_ responseCode: Int?, _ response: SignInResponse?) -> Void) async -> Void {
@@ -79,20 +95,6 @@ class UserStateViewModel: ObservableObject {
         }
         return nil
     }
-    
-    func getAllPRODUCT() async {
-        do {
-            guard let url = URL(string: "http://10.13.104.203:3000/api/v1/admin/get-products") else { fatalError("Missing Url")}
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
-            let (data, response) = try await URLSession.shared.data(for: request)
-            debugPrint(response)
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Internal Server Error")}
-        }
-        catch {
-            fatalError("Catch eoor ")
-        }
-    }
-    
+        
     
 }

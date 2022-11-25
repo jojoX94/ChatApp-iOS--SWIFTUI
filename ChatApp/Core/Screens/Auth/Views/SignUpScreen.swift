@@ -143,10 +143,8 @@ extension SignUpScreen {
     private var submitButton: some View {
         Button {
             Task {
-                await userViewModel.signUp_v1(name: username, email: email, password: password)
-//                await userViewModel.getAllPRODUCT()
-//                await userViewModel.signUp(email: email, password: password)
-                
+                await userViewModel.signUp_v2(name: username, email: email, password: password)
+//                await userViewModel.signUp_v1(name: username, email: email, password: password)
             }
         } label: {
             Text("Sign Up")

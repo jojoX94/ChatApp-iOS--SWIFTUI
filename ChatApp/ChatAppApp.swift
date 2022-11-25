@@ -15,7 +15,6 @@ struct ChatAppApp: App {
     
     
     init() {
-        KeychainWrapper.standard.removeAllKeys()
         let transparentAppearence = UITabBarAppearance()
         transparentAppearence.configureWithTransparentBackground() // 🔑
         UITabBar.appearance().standardAppearance = transparentAppearence

@@ -16,4 +16,6 @@ struct Defaults {
     static let userName = "UserName"
     
     static let firstTimeLaunchOccurred = "firstTimeLaunchOccurred"
+    
+    static let apiURL = "http://10.13.104.203:3000/api/v1"
 }

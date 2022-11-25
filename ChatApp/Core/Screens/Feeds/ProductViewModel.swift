@@ -27,7 +27,7 @@ import Foundation
 
 
 import Foundation
-import UIKit
+import Combine
 
 @MainActor
 class ProductViewModel: ObservableObject {
@@ -35,11 +35,29 @@ class ProductViewModel: ObservableObject {
     @Published var products = [Product]()
     @Published var isLoading = false
     
-    init(products: [Product] = [Product]()) {
-        getProducts()
+    private var cancellableSet: Set<AnyCancellable> = []
+    var dataManager: ServiceProtocol
+    
+    init( dataManager: ServiceProtocol = Service.shared, products: [Product] = [Product]()) {
+        self.dataManager = dataManager
+        getProducts_v2()
+//        getProducts_v1()
     }
     
-    func getProducts() -> Void{
+    func getProducts_v2() {
+        dataManager
+            .fetchProducts()
+            .sink { (dataResponse) in
+                if dataResponse.error != nil {
+                    
+                } else {
+                    self.products = dataResponse.value!.data
+                    debugPrint(self.products)
+                }
+            }.store(in: &cancellableSet)
+    }
+    
+    func getProducts_v1() -> Void{
         isLoading = true
         AppService.Products { [weak self] responseCode, response in
             self?.isLoading = false

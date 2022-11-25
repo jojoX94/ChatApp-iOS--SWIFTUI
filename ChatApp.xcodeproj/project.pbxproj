@@ -45,6 +45,11 @@
 		495B97C4292FB94F00964551 /* ASProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97C3292FB94F00964551 /* ASProduct.swift */; };
 		495B97C72930975A00964551 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97C62930975A00964551 /* LoadingView.swift */; };
 		495B97CA2930DD4F00964551 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97C92930DD4F00964551 /* SplashScreen.swift */; };
+		495B97CE2930ED1400964551 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97CD2930ED1400964551 /* NetworkError.swift */; };
+		495B97D02930ED9300964551 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97CF2930ED9300964551 /* Service.swift */; };
+		495B97D32930F7DF00964551 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97D22930F7DF00964551 /* Product.swift */; };
+		495B97D72930FEA500964551 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97D62930FEA500964551 /* SignUpRes.swift */; };
+		495B97DA293101A900964551 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495B97D9293101A900964551 /* EndPoint.swift */; };
 		4968A372292B74B100D03974 /* MessageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A371292B74B100D03974 /* MessageTextField.swift */; };
 		4968A374292BA77C00D03974 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A373292BA77C00D03974 /* IconButton.swift */; };
 		4968A37B292BB15000D03974 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A37A292BB15000D03974 /* ProfileScreen.swift */; };
@@ -126,6 +131,11 @@
 		495B97C3292FB94F00964551 /* ASProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASProduct.swift; sourceTree = "<group>"; };
 		495B97C62930975A00964551 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		495B97C92930DD4F00964551 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		495B97CD2930ED1400964551 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		495B97CF2930ED9300964551 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		495B97D22930F7DF00964551 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		495B97D62930FEA500964551 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
+		495B97D9293101A900964551 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		4968A371292B74B100D03974 /* MessageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTextField.swift; sourceTree = "<group>"; };
 		4968A373292BA77C00D03974 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		4968A37A292BB15000D03974 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
@@ -190,6 +200,8 @@
 		49036399292A8C3000D0F4A7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				495B97D12930F7CA00964551 /* Product */,
+				495B97CC2930ED0500964551 /* Error */,
 				4903639B292A8C8800D0F4A7 /* UserResponse.swift */,
 				49AF529C292B52EB00420AE1 /* Message.swift */,
 			);
@@ -219,6 +231,7 @@
 		490A1B0E292E0959000A38F0 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				495B97CB2930EBFE00964551 /* NewWay */,
 				490A1B26292F9ADE000A38F0 /* OldWay */,
 			);
 			path = Service;
@@ -390,6 +403,48 @@
 				495B97C92930DD4F00964551 /* SplashScreen.swift */,
 			);
 			path = Spash;
+			sourceTree = "<group>";
+		};
+		495B97CB2930EBFE00964551 /* NewWay */ = {
+			isa = PBXGroup;
+			children = (
+				495B97D42930FC5200964551 /* Authentification */,
+				495B97CF2930ED9300964551 /* Service.swift */,
+				495B97D9293101A900964551 /* EndPoint.swift */,
+			);
+			path = NewWay;
+			sourceTree = "<group>";
+		};
+		495B97CC2930ED0500964551 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				495B97CD2930ED1400964551 /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		495B97D12930F7CA00964551 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				495B97D22930F7DF00964551 /* Product.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		495B97D42930FC5200964551 /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				495B97D52930FC6400964551 /* SignUp */,
+			);
+			path = Authentification;
+			sourceTree = "<group>";
+		};
+		495B97D52930FC6400964551 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				495B97D62930FEA500964551 /* SignUpRes.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		4968A370292B749700D03974 /* TextFields */ = {
@@ -760,6 +815,7 @@
 				49AF52A3292B571200420AE1 /* MessageView.swift in Sources */,
 				495B97C4292FB94F00964551 /* ASProduct.swift in Sources */,
 				4923A10C2913EC640050ABBE /* TabBarIcon.swift in Sources */,
+				495B97DA293101A900964551 /* EndPoint.swift in Sources */,
 				490A1B22292F4FA4000A38F0 /* KeyChainItemAccessibility.swift in Sources */,
 				490A1B3A292FB301000A38F0 /* SignInResponse.swift in Sources */,
 				49B515E028FEA524004D30A2 /* CustomInputField.swift in Sources */,
@@ -801,9 +857,13 @@
 				495B97C72930975A00964551 /* LoadingView.swift in Sources */,
 				490A1B25292F96EE000A38F0 /* Default.swift in Sources */,
 				49B5159528FD4F1B004D30A2 /* ChatAppApp.swift in Sources */,
+				495B97D32930F7DF00964551 /* Product.swift in Sources */,
+				495B97D02930ED9300964551 /* Service.swift in Sources */,
 				490A1B2B292F9C57000A38F0 /* SignUpResponse.swift in Sources */,
 				4952CE4129011FD700B93F91 /* CustomIcon.swift in Sources */,
+				495B97CE2930ED1400964551 /* NetworkError.swift in Sources */,
 				4968A37B292BB15000D03974 /* ProfileScreen.swift in Sources */,
+				495B97D72930FEA500964551 /* SignUpRes.swift in Sources */,
 				490A1B15292F4BED000A38F0 /* ProductViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

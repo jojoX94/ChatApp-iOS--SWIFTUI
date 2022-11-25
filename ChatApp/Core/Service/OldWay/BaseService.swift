@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 import ObjectMapper
 
-let url = "http://10.13.104.203:3000/api/v1"
+let url = Defaults.apiURL
 
 class BaseService {
     static func mapTo<T: Mappable>(_ responseData: AFDataResponse<Data?>) -> T? {
