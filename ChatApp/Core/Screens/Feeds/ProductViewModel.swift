@@ -33,13 +33,17 @@ import UIKit
 class ProductViewModel: ObservableObject {
     
     @Published var products = [Product]()
+    @Published var isLoading = false
     
     init(products: [Product] = [Product]()) {
         getProducts()
     }
     
     func getProducts() -> Void{
+        isLoading = true
         AppService.Products { [weak self] responseCode, response in
+            self?.isLoading = false
+            
             if let response = response {
                 self?.products = response
             }

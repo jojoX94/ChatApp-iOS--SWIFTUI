@@ -19,18 +19,25 @@ class UserStateViewModel: ObservableObject {
     }
     
     fileprivate func verifyIfUserLoggeIn() -> Bool {
-        let keychain = KeychainWrapper.standard
+        let keychain = UserDefaults.standard
         let pusherId = keychain.string(forKey: Defaults.pushUserId)
         
-        if UserDefaults.standard.bool(forKey: Defaults.firstTimeLaunchOccurred) {
-            KeychainWrapper.standard.removeAllKeys()
-            UserDefaults.standard.set(false, forKey: Defaults.firstTimeLaunchOccurred)
-        }
+//        let keychain = KeychainWrapper.standard
+//        let pusherId = keychain.string(forKey: Defaults.pushUserId)
+        
+//        if UserDefaults.standard.bool(forKey: Defaults.firstTimeLaunchOccurred) {
+//            KeychainWrapper.standard.removeAllKeys()
+//            UserDefaults.standard.set(false, forKey: Defaults.firstTimeLaunchOccurred)
+//        }
         
         if let pusherId = pusherId, !pusherId.isEmpty {
             return true
         } else {
+            #if targetEnvironment(simulator)
+            keychain.set( UUID().uuidString, forKey: Defaults.pushUserId)
+            #else
             keychain.set(UIDevice.current.identifierForVendor!.uuidString, forKey: Defaults.pushUserId)
+            #endif
             return false
         }
     }

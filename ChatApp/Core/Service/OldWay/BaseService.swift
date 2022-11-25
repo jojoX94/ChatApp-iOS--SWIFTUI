@@ -37,7 +37,7 @@ class BaseService {
     }
     
     static var headers: HTTPHeaders {
-        let token = KeychainWrapper.standard.string(forKey: Defaults.accessToken)
+        let token = UserDefaults.standard.string(forKey: Defaults.accessToken)
         
         if let token = token {
             

@@ -15,17 +15,22 @@ struct FeedScreen: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 20) {
-                    storiesList
-                    
-                    feedsList
+
+            if productsVM.isLoading {
+                LoadingView(count: 3, width: 10, spacing: 4)
+            } else {
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 20) {
+                        storiesList
+
+                        feedsList
+                    }
                 }
+                .padding(.top, 20)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar(content: myToolBarContent)
             }
-            .padding(.top, 20)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar(content: myToolBarContent)
-            
+
         }
     }
 }

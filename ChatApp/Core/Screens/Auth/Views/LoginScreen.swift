@@ -122,7 +122,7 @@ extension LoginScreen {
                     if responseCode == 200 {
                         userViewModel.isLoggedIn = true
                         if let response = response {
-                            KeychainWrapper.standard.set(response.accessToken, forKey: Defaults.accessToken)
+                            UserDefaults.standard.set(response.accessToken, forKey: Defaults.accessToken)
                         }
                         
                     }
