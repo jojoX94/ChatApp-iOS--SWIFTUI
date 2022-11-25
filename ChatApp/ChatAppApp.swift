@@ -9,9 +9,25 @@ import SwiftUI
 
 @main
 struct ChatAppApp: App {
+    @State private var isActive = false
+    let tabBar = UITabBar.appearance()
+    let appearance: UITabBarAppearance = UITabBarAppearance()
+    
+    
+    init() {
+        let transparentAppearence = UITabBarAppearance()
+        transparentAppearence.configureWithTransparentBackground() // 🔑
+        UITabBar.appearance().standardAppearance = transparentAppearence
+        UITabBar.appearance().backgroundColor = UIColor(named: "LightBlue")
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isActive {
+                ContentView()
+            } else {
+                SplashScreen(isActive: $isActive)
+            }
         }
     }
 }

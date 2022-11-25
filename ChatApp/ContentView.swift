@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var userViewModel = UserStateViewModel()
+    
     var body: some View {
-        FeedView()
+        Group {
+            if userViewModel.isLoggedIn {
+                MainTabView()
+                    
+            } else {
+                LoginScreen()
+            }
+        }
+        .environmentObject(userViewModel)
+        
     }
 }
 

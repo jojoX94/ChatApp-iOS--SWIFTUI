@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignUpView: View {
+struct SignUpScreen: View {
     
     // MARK: PROPERTY
     
@@ -19,6 +19,9 @@ struct SignUpView: View {
     @State var isMarked = false
     @State var termsIsVisible = false
     @State var privacyIsVisible = false
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var userViewModel: UserStateViewModel
     
     // MARK: BODY
     
@@ -35,37 +38,22 @@ struct SignUpView: View {
                     Image("trip")
                     
                     VStack(spacing: 0) {
-                        CustomInputField(text: $username, title: "Username", placeholder: "username").padding(.bottom, 18)
                         
-                        CustomInputField(text: $email, title: "E-mail", placeholder: "example@email.com").padding(.bottom, 18)
-                        
-                        CustomSecureInput(text: $password, title: "Password", placeholder: "at least 8 characters").padding(.bottom, 14)
+                        listTextFields
                         
                         authAction
                         
-                        Button {
-                            print("Button Login clicked => \(username) \(email) \(password)")
-                        } label: {
-                            Text("Sign Up")
-                                .font(.custom("Roboto-Medium", size: 15))
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .foregroundColor(.white)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 10)
-                                        .foregroundColor(Color("Blue"))
-                                )
-                        }
+                        submitButton
                         
                         Spacer()
                         
                         signUpLink
                         
                         Spacer()
-
+                        
                     }
                     .padding(.horizontal)
-                        
+                    
                 }
                 .background(Color.white)
                 .clipShape(RoundedShape(corners: [.topLeft, .topRight]))
@@ -77,24 +65,25 @@ struct SignUpView: View {
     }
 }
 
-struct SignUpView_Previews: PreviewProvider {
+struct SignUpScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        SignUpScreen()
     }
 }
 
 // MARK: COMPONENTS
-extension SignUpView {
+
+extension SignUpScreen {
     private var headerView: some View {
         HStack(spacing: 30) {
             Button {
-                print("Back button clicked")
+                presentationMode.wrappedValue.dismiss()
             } label: {
                 Image(systemName: "chevron.backward")
                     .font(.title2)
                     .foregroundColor(.white)
             }
-
+            
             Text("Sign Up.")
                 .font(.custom("Roboto-Black", size: 36))
                 .foregroundColor(.white)
@@ -102,6 +91,16 @@ extension SignUpView {
             Spacer()
         }
         .padding(.horizontal)
+    }
+    
+    private var listTextFields: some View {
+        Group {
+            CustomInputField(text: $username, title: "Username", placeholder: "username").padding(.bottom, 18)
+            
+            CustomInputField(text: $email, title: "E-mail", placeholder: "example@email.com").padding(.bottom, 18)
+            
+            CustomSecureInput(text: $password, title: "Password", placeholder: "at least 8 characters").padding(.bottom, 14)
+        }
     }
     
     private var authAction: some View {
@@ -129,29 +128,45 @@ extension SignUpView {
                     Text("Privacy")
                         .foregroundColor(Color("Blue"))
                         .onTapGesture {
-                            print("Show Privacy sheet")
+                            termsIsVisible.toggle()
                         }
                     
                 }.font(.custom("Roboto-Regular", size: 11))
                 
             }
             Spacer()
-
+            
         }
         .padding(.bottom, 27)
+    }
+    
+    private var submitButton: some View {
+        Button {
+            Task {
+                await userViewModel.signUp_v2(name: username, email: email, password: password)
+//                await userViewModel.signUp_v1(name: username, email: email, password: password)
+            }
+        } label: {
+            Text("Sign Up")
+                .modifier(TextLargeButtonStyle())
+        }
     }
     
     private var signUpLink: some View {
         HStack {
             Text("I'm already an account.")
-                .font(.custom("Roboto-Light", size: 11))
                 .foregroundColor(.black.opacity(0.9))
-            Text("Sign In")
-                .font(.custom("Roboto-Medium", size: 11))
-                .foregroundColor(Color("Blue"))
-                .onTapGesture {
-                    print("Button Sign Up Tapped")
-                }
+            NavigationLink {
+                LoginScreen()
+                    .navigationBarBackButtonHidden(true)
+            } label: {
+                Text("Sign In")
+                    .foregroundColor(Color("Blue"))
+            }
+
+            
         }
+        .font(.custom("Roboto-Light", size: 11))
     }
+    
 }

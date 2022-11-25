@@ -29,31 +29,30 @@ struct TweetView: View {
                 // FIX: Blur effect in buttons's actions not implemented
                 
                 Image("TweetIllustration")
-                                .renderingMode(.original)
-                                .resizable()
-                                .clipShape(RoundedRectangle(cornerRadius: 20))
-                                .overlay(alignment: .bottom) {
-                                    HStack {
-                                        HStack(spacing: 10) {
-                                            CustomIcon(systemeName: "ellipsis.message.fill", count: "4")
-                                            CustomIcon(systemeName: "suit.heart.fill", count: "6")
-                                        }
-                
-                                        Spacer()
-                
-                                        HStack(spacing: 8) {
-                                            CustomIcon(systemeName: "paperplane.fill")
-                                            CustomIcon(systemeName: "bookmark.fill")
-                                        }
-                                    }
-                                    .padding(.vertical, 12)
-                                    .padding(.horizontal, 28)
-                                    .overlay(content: {
-                                        Rectangle()
-                                            .fill(.white.opacity(0.2))
-                                            .blur(radius: 20)
-                                    })
-                                }
+                    .renderingMode(.original)
+                    .resizable()
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .overlay(alignment: .bottom) {
+                        HStack {
+                            HStack(spacing: 10) {
+                                CustomIcon(systemeName: "ellipsis.message.fill", count: "4")
+                                CustomIcon(systemeName: "suit.heart.fill", count: "6")
+                            }
+                            
+                            Spacer()
+                            
+                            HStack(spacing: 8) {
+                                CustomIcon(systemeName: "paperplane.fill")
+                                CustomIcon(systemeName: "bookmark.fill")
+                            }
+                        }
+                        .padding(.vertical, 12)
+                        .padding(.horizontal, 28)
+                        .background(
+                            Color.black.opacity(0.7).blur(radius: 01)
+                        )
+                        .clipShape(RoundedShape(corners: [.bottomLeft, .bottomRight]))
+                    }
                 
             }
             .frame(width: UIScreen.screenWidth - 60, height: UIScreen.screenHeight * 0.325)
@@ -75,13 +74,13 @@ struct TweetView_Previews: PreviewProvider {
 }
 
 extension TweetView {
-//    private var image: Image {
-//        Image("TweetIllustration")
-//            .renderingMode(.original)
-//            .resizable()
-//            .frame(width: 350, height: 268)
-//            .clipShape(RoundedRectangle(cornerRadius: 20))
-//    }
+    //    private var image: Image {
+    //        Image("TweetIllustration")
+    //            .renderingMode(.original)
+    //            .resizable()
+    //            .frame(width: 350, height: 268)
+    //            .clipShape(RoundedRectangle(cornerRadius: 20))
+    //    }
 }
 
 struct VisualEffectView: UIViewRepresentable {

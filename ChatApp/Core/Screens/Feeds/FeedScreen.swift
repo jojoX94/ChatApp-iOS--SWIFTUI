@@ -7,32 +7,46 @@
 
 import SwiftUI
 
-struct FeedView: View {
+struct FeedScreen: View {
+    
+    @StateObject var productsVM = ProductViewModel()
+    
+    // MARK: BODY
+    
     var body: some View {
-        NavigationView {
-            ScrollView(showsIndicators: false) {
-                VStack(spacing: 20) {
-                    
-                    storiesList
+        NavigationStack {
 
-                    feedsList
+            if productsVM.isLoading {
+                LoadingView(count: 3, width: 10, spacing: 4)
+            } else {
+                ScrollView(showsIndicators: false) {
+                    VStack(spacing: 20) {
+                        storiesList
+
+                        feedsList
+                    }
                 }
+                .padding(.top, 20)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar(content: myToolBarContent)
             }
-            .padding(.top, 20)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar(content: myToolBarContent)
-            
+
+        }
+        .onAppear {
+            print(productsVM.products)
         }
     }
 }
 
-struct FeedView_Previews: PreviewProvider {
+struct FeedScreen_Previews: PreviewProvider {
     static var previews: some View {
-        FeedView()
+        FeedScreen()
     }
 }
 
-extension FeedView {
+// MARK: COMPONENTS
+
+extension FeedScreen {
     private var storiesList: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack( spacing: 25) {
@@ -57,20 +71,24 @@ extension FeedView {
     @ToolbarContentBuilder
     func myToolBarContent() -> some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
-            Image("CameraIcon")
-                .background(
-                    Circle()
-                        .frame(width: 48, height: 48)
-                        .foregroundColor(Color(hex: "#E6EEFA"))
+            HStack {
+                Image("CameraIcon")
+                    .background(
+                        Circle()
+                            .frame(width: 44, height: 44)
+                            .foregroundColor(Color(hex: "#E6EEFA"))
                     )
-                .padding(.leading, 10)
-                .padding(.bottom, 15)
+            }
+            .padding(.leading, 10)
+            .padding(.vertical, 20)
         }
+        
         
         ToolbarItem(placement: .principal) {
             Text("Home")
                 .font(.custom("Poppins-SemiBold", size: 20))
                 .foregroundColor(.black)
+                .padding(.vertical, 20)
         }
         
         
@@ -78,11 +96,11 @@ extension FeedView {
             Image("NotifIcon")
                 .background(
                     Circle()
-                        .frame(width: 48, height: 48)
+                        .frame(width: 44, height: 44)
                         .foregroundColor(Color(hex: "#E6EEFA"))
-                    )
+                )
                 .padding(.trailing, 10)
-                .padding(.bottom, 15)
+                .padding(.vertical, 20)
         }
     }
 }
