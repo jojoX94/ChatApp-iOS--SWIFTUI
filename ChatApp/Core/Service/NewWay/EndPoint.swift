@@ -7,10 +7,11 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 extension Service: ServiceProtocol {
     
-    func registerUser(name: String, email: String, password: String) -> AnyPublisher<Alamofire.DataResponse<SignUpRes, NetworkError>, Never> {
+    func registerUser(name: String, email: String, password: String) -> AnyPublisher<DataResponse<SignUpRes, NetworkError>, Never> {
         
         let url = URL(string: Defaults.apiURL + "/signup")!
         

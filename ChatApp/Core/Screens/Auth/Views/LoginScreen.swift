@@ -18,7 +18,6 @@ struct LoginScreen: View {
     @EnvironmentObject var userViewModel: UserStateViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    
     // MARK: BODY
     
     var body: some View {

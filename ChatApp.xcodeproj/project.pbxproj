@@ -55,6 +55,7 @@
 		4968A37B292BB15000D03974 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A37A292BB15000D03974 /* ProfileScreen.swift */; };
 		4968A37E292BB64200D03974 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A37D292BB64200D03974 /* CustomLabel.swift */; };
 		4968A380292BBA9400D03974 /* CountLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4968A37F292BBA9400D03974 /* CountLabel.swift */; };
+		49A02ECB2935D94E0013C0C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A02ECA2935D94E0013C0C0 /* LaunchScreen.storyboard */; };
 		49AF529B292B51AC00420AE1 /* DetailMessageScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF529A292B51AC00420AE1 /* DetailMessageScreen.swift */; };
 		49AF529D292B52EB00420AE1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF529C292B52EB00420AE1 /* Message.swift */; };
 		49AF529F292B531F00420AE1 /* ContentMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AF529E292B531F00420AE1 /* ContentMessageView.swift */; };
@@ -141,6 +142,7 @@
 		4968A37A292BB15000D03974 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		4968A37D292BB64200D03974 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		4968A37F292BBA9400D03974 /* CountLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountLabel.swift; sourceTree = "<group>"; };
+		49A02ECA2935D94E0013C0C0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49AF529A292B51AC00420AE1 /* DetailMessageScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMessageScreen.swift; sourceTree = "<group>"; };
 		49AF529C292B52EB00420AE1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		49AF529E292B531F00420AE1 /* ContentMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMessageView.swift; sourceTree = "<group>"; };
@@ -211,7 +213,8 @@
 		4903639A292A8C4900D0F4A7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				495B97C82930DD3B00964551 /* Spash */,
+				49A02EC92935D9370013C0C0 /* Launch */,
+				495B97C82930DD3B00964551 /* Spalsh */,
 				4968A377292BB11400D03974 /* Profile */,
 				4952CE2528FFFAAC00B93F91 /* Feeds */,
 				49D7A81C291A2C97009A08C1 /* Messages */,
@@ -397,12 +400,12 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
-		495B97C82930DD3B00964551 /* Spash */ = {
+		495B97C82930DD3B00964551 /* Spalsh */ = {
 			isa = PBXGroup;
 			children = (
 				495B97C92930DD4F00964551 /* SplashScreen.swift */,
 			);
-			path = Spash;
+			path = Spalsh;
 			sourceTree = "<group>";
 		};
 		495B97CB2930EBFE00964551 /* NewWay */ = {
@@ -486,6 +489,14 @@
 				4968A37F292BBA9400D03974 /* CountLabel.swift */,
 			);
 			path = Label;
+			sourceTree = "<group>";
+		};
+		49A02EC92935D9370013C0C0 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				49A02ECA2935D94E0013C0C0 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		49B5158828FD4F1B004D30A2 = {
@@ -797,6 +808,7 @@
 				49B515D228FE7374004D30A2 /* Roboto-ThinItalic.ttf in Resources */,
 				4952CE302900162F00B93F91 /* Inter-Thin.ttf in Resources */,
 				49B515CA28FE7374004D30A2 /* Poppins-Light.ttf in Resources */,
+				49A02ECB2935D94E0013C0C0 /* LaunchScreen.storyboard in Resources */,
 				49B515D628FE7374004D30A2 /* Roboto-Black.ttf in Resources */,
 				49B5159928FD4F1D004D30A2 /* Assets.xcassets in Resources */,
 			);
@@ -1001,7 +1013,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to scan the qrcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1032,7 +1044,7 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to scan the qrcodes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

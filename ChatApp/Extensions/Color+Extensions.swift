@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 extension Color {
+    
+    static let theme = ColorTheme()
+    
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
@@ -33,4 +36,15 @@ extension Color {
             opacity: Double(a) / 255
         )
     }
+    
+    
+}
+
+struct ColorTheme {
+    
+    let accent = Color("AccentColor")
+    let blue = Color("Blue")
+    let lightBlue = Color("LightBlue")
+    let lightYellow = Color("LightYellow")
+    
 }
