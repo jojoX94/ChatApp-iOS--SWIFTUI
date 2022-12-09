@@ -18,7 +18,7 @@ struct MainTabView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                mainScreen
+                mainScreen()
                 
                 if !viewRouter.tabBarHidden {
                     customTabView(geometry: geometry)
@@ -38,7 +38,7 @@ struct MainTabView_Previews: PreviewProvider {
 // MARK: COMPONENTS
 
 extension MainTabView {
-    private var mainScreen: some View {
+    private func mainScreen() -> some View {
         Group {
             switch viewRouter.currentPage {
                 case .home:

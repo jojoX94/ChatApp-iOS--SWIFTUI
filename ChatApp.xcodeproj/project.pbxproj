@@ -768,6 +768,7 @@
 				490A1B0B292D0B73000A38F0 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				490A1B0F292F3C59000A38F0 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				490A1B2C292FA20D000A38F0 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
+				49D221C0294364C8006B3730 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 49B5159228FD4F1B004D30A2 /* Products */;
 			projectDirPath = "";
@@ -1102,6 +1103,14 @@
 		490A1B2C292FA20D000A38F0 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/tristanhimmelman/ObjectMapper.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		49D221C0294364C8006B3730 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				branch = master;
 				kind = branch;
